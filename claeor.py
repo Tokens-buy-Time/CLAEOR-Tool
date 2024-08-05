@@ -1,11 +1,12 @@
 
+
 import pandas as pd
 import streamlit as st
 
 # Function to read default data from Assumptions.txt
 def load_assumptions():
     assumptions = {}
-    with open('https://github.com/Tokens-buy-Time/data/CLAEOR-Tool/Assumptions.txt', 'r') as file:
+    with open('/mnt/data/Assumptions.txt', 'r') as file:
         lines = file.readlines()
         assumptions["fixed_costs"] = float(lines[0].strip())
         assumptions["variable_costs_per_hour"] = float(lines[1].strip())
@@ -21,7 +22,7 @@ def load_assumptions():
 # Function to read default data from Operations-Data.txt
 def load_operations_data():
     operations_data = {}
-    with open('https://github.com/Tokens-buy-Time/data/CLAEOR-Tool/Operations-Data.txt', 'r') as file:
+    with open('/mnt/data/Operations-Data.txt', 'r') as file:
         lines = file.readlines()
         for i in range(0, len(lines), 8):
             year = int(lines[i].strip())
@@ -129,6 +130,24 @@ def start_claeor_tool():
 
         st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
         st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
+
+def calculate_financials(year, fixed_costs, variable_costs_per_hour, hours_per_year, aircraft_acquisition_cost, no_of_aircraft_in_fleet, no_of_aircraft_sold_per_year, gross_margin_percent, debt_to_equity_ratio, mro_services_revenue, partnership_revenue, operating_expenses):
+    # Your financial calculation logic here
+    revenue = (no_of_aircraft_in_fleet * hours_per_year * variable_costs_per_hour * (1 + gross_margin_percent / 100)) + mro_services_revenue + partnership_revenue
+    costs = fixed_costs + (variable_costs_per_hour * hours_per_year * no_of_aircraft_in_fleet) + operating_expenses
+    net_profit = revenue - costs
+    assets = no_of_aircraft_in_fleet * aircraft_acquisition_cost
+    liabilities = assets * debt_to_equity_ratio
+    equity = assets - liabilities
+
+    return {
+        "revenue": revenue,
+        "costs": costs,
+        "net_profit": net_profit,
+        "assets": assets,
+        "liabilities": liabilities,
+        "equity": equity
+    }
 
 if __name__ == '__main__':
     start_claeor_tool()
