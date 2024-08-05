@@ -66,16 +66,16 @@ def start_claeor_tool():
 
     if choice == "Home":
         st.subheader("Welcome to the Caribbean Luxury Aerial Experience Operations Research Tool")
-        st.write("Navigate through the menu to input assumptions, operational data, view financial statements and review performance metrics.")
+        st.write("Navigate through the menu to input assumptions, operational data, view financial statements, and perform sensitivity analysis.")
 
     elif choice == "Assumptions Input":
         st.subheader("Input Assumptions")
         revenue_per_hour = st.number_input("Revenue per Hour", min_value=0.0)
         variable_cost_per_hour = st.number_input("Variable Cost per Hour", min_value=0.0)
         fixed_costs = st.number_input("Total Fixed Costs", min_value=0.0)
-        depreciation_rate = st.number_input("Depreciation Rate (0<?<1)", min_value=0.0, max_value=1.0)
-        interest_rate = st.number_input("Interest Rate (0<?<1)", min_value=0.0, max_value=1.0)
-        tax_rate = st.number_input("Tax Rate (0<?<1)", min_value=0.0, max_value=1.0)
+        depreciation_rate = st.number_input("Depreciation Rate (0 to 1)", min_value=0.0, max_value=1.0)
+        interest_rate = st.number_input("Interest Rate (0 to 1)", min_value=0.0, max_value=1.0)
+        tax_rate = st.number_input("Tax Rate (0 to 1)", min_value=0.0, max_value=1.0)
         gross_margin = st.number_input("Gross Margin (%)", min_value=0.0, max_value=100.0)
         debt_to_equity_ratio = st.number_input("Debt to Equity Ratio (%)", min_value=0.0, max_value=100.0)
         aircraft_price = st.number_input("Price per Aircraft", min_value=0.0)
@@ -191,3 +191,4 @@ def start_claeor_tool():
 
 if __name__ == "__main__":
      start_claeor_tool()
+    
