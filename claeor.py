@@ -172,7 +172,7 @@ def start_claeor_tool():
         total_assets_10 = df_financials["assets"].sum()
         total_liabilities_10 = df_financials["liabilities"].sum()
         total_equity_10 = df_financials["equity"].sum()
-        total_capital_supplied_10 = df_financials[“capital_supplied”].sum()
+        total_capital_supplied_10 = df_financials["capital_supplied"].sum()
 
         st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
         st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
