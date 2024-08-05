@@ -5,7 +5,7 @@ import streamlit as st
 # Function to read default data from Assumptions.txt
 def load_assumptions():
     assumptions = {}
-    with open('claeor-tool/Assumptions.txt', 'r') as file:
+    with open('Assumptions.txt', 'r') as file:
         lines = file.readlines()
         assumptions["fixed_costs"] = float(lines[0].strip())
         assumptions["variable_costs_per_hour"] = float(lines[1].strip())
@@ -21,7 +21,7 @@ def load_assumptions():
 # Function to read default data from Operations-Data.txt
 def load_operations_data():
     operations_data = {}
-    with open('claeor-tool/Operations-Data.txt', 'r') as file:
+    with open('Operations-Data.txt', 'r') as file:
         lines = file.readlines()
         for i in range(0, len(lines), 8):
             year = int(lines[i].strip())
