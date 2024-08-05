@@ -67,10 +67,25 @@ def start_claeor_tool():
         if st.button(f"Save Year {year_data[0]} Data"):
             st.success(f"Year {year_data[0]} data saved!")
 
-    # Add functionality to save inputs and continue execution
-    st.button("Run Analysis")
+    if st.button("Run Analysis"):
+        st.success("Analysis complete!")
+        # Display performance metrics
+        st.header("Performance Metrics")
+        st.write("Metrics will be calculated and displayed here based on the input data.")
 
-    # Code to process the data and display performance metrics will go here
+        # Display financial statements
+        st.header("Financial Statements")
+        st.subheader("Income Statement")
+        st.write("Income statement details will be displayed here.")
+
+        st.subheader("Balance Sheet")
+        st.write("Balance sheet details will be displayed here.")
+
+        st.subheader("Cash Flow Statement")
+        st.write("Cash flow statement details will be displayed here.")
+
+    # Add functionality to save inputs and continue execution
+    st.button("Save and Continue")
 
 # Run the app
 if __name__ == "__main__":
