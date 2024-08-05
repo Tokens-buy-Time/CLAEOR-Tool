@@ -52,13 +52,15 @@ def operations_data_screen():
     st.header("Operations Data")
     for year_data in st.session_state["operations_data"]:
         st.subheader(f"Year {year_data[0]}")
-        year_data[1] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[0]})", value=year_data[1])
-        year_data[2] = st.number_input(f"No. of Aircraft Sold per Year (Year {year_data[0]})", value=year_data[2])
-        year_data[3] = st.number_input(f"Gross Margin % (Year {year_data[0]})", value=year_data[3])
-        year_data[4] = st.number_input(f"Debt to Equity Ratio (Year {year_data[0]})", value=year_data[4])
-        year_data[5] = st.number_input(f"MRO Services Revenue (Year {year_data[0]})", value=year_data[5])
-        year_data[6] = st.number_input(f"Partnership Revenue (Year {year_data[0]})", value=year_data[6])
-        year_data[7] = st.number_input(f"Operating Expenses (Year {year_data[0]})", value=year_data[7])
+        year_data[1] = st.number_input(f"No. of Billable per annum (Year {year_data[0]})", value=year_data[1])
+        year_data[2] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[0]})", value=year_data[2])
+        year_data[3] = st.number_input(f"No. of Aircraft Sold per Year (Year {year_data[0]})", value=year_data[3])
+        year_data[4] = st.number_input(f"Gross Margin % (Year {year_data[0]})", value=year_data[4])
+        year_data[5] = st.number_input(f"Debt to Equity Ratio (Year {year_data[0]})", value=year_data[5])
+        year_data[6] = st.number_input(f"MRO Services Revenue (Year {year_data[0]})", value=year_data[6])
+        year_data[7] = st.number_input(f"Partnership Revenue (Year {year_data[0]})", value=year_data[7])
+        year_data[8] = st.number_input(f"Operating Expenses (Year {year_data[0]})", value=year_data[8])
+        year_data[9] = st.number_input(f"Investor Capital Call (Year {year_data[0]})", value=year_data[9])
 
         if st.button(f"Save Year {year_data[0]} Data"):
             st.success(f"Year {year_data[0]} data saved!")
