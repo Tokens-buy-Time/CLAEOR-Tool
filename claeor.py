@@ -161,7 +161,7 @@ def start_claeor_tool():
             total_capital_supplied = 0
             for year, data in operational_data.items():
                 financials = calculate_financials(year, assumptions, data)
-                all_financials[year] = financial s
+                all_financials[year] = financials
 total_capital_supplied += financials[“capital_supplied”]
 
         df_financials = pd.DataFrame(all_financials).T
