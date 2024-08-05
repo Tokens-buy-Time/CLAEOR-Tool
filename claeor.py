@@ -188,5 +188,6 @@ def start_claeor_tool():
         st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
     else:
         st.warning("Please input assumptions and operational data first.")
-    start_claeor_tool()
+
+start_claeor_tool()
     
