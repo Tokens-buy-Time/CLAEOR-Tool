@@ -1,40 +1,44 @@
-
-
 import pandas as pd
 import streamlit as st
 
 # Function to read default data from Assumptions.txt
 def load_assumptions():
     assumptions = {}
-    with open('/mnt/data/Assumptions.txt', 'r') as file:
-        lines = file.readlines()
-        assumptions["fixed_costs"] = float(lines[0].strip())
-        assumptions["variable_costs_per_hour"] = float(lines[1].strip())
-        assumptions["hours_per_year"] = int(lines[2].strip())
-        assumptions["aircraft_acquisition_cost"] = float(lines[3].strip())
-        assumptions["no_of_aircraft_in_fleet"] = int(lines[4].strip())
-        assumptions["no_of_aircraft_sold_per_year"] = int(lines[5].strip())
-        assumptions["gross_margin_percent"] = float(lines[6].strip())
-        assumptions["debt_to_equity_ratio"] = float(lines[7].strip())
-        assumptions["capital_supplied"] = float(lines[8].strip())
+    try:
+        with open('/mnt/data/Assumptions.txt', 'r') as file:
+            lines = file.readlines()
+            assumptions["fixed_costs"] = float(lines[0].strip())
+            assumptions["variable_costs_per_hour"] = float(lines[1].strip())
+            assumptions["hours_per_year"] = int(lines[2].strip())
+            assumptions["aircraft_acquisition_cost"] = float(lines[3].strip())
+            assumptions["no_of_aircraft_in_fleet"] = int(lines[4].strip())
+            assumptions["no_of_aircraft_sold_per_year"] = int(lines[5].strip())
+            assumptions["gross_margin_percent"] = float(lines[6].strip())
+            assumptions["debt_to_equity_ratio"] = float(lines[7].strip())
+            assumptions["capital_supplied"] = float(lines[8].strip())
+    except FileNotFoundError:
+        st.error("Assumptions.txt file not found.")
     return assumptions
 
 # Function to read default data from Operations-Data.txt
 def load_operations_data():
     operations_data = {}
-    with open('/mnt/data/Operations-Data.txt', 'r') as file:
-        lines = file.readlines()
-        for i in range(0, len(lines), 8):
-            year = int(lines[i].strip())
-            operations_data[year] = {
-                "mro_services_revenue": float(lines[i + 1].strip()),
-                "partnership_revenue": float(lines[i + 2].strip()),
-                "operating_expenses": float(lines[i + 3].strip()),
-                "no_of_aircraft_in_fleet": int(lines[i + 4].strip()),
-                "no_of_aircraft_sold_per_year": int(lines[i + 5].strip()),
-                "gross_margin_percent": float(lines[i + 6].strip()),
-                "debt_to_equity_ratio": float(lines[i + 7].strip())
-            }
+    try:
+        with open('/mnt/data/Operations-Data.txt', 'r') as file:
+            lines = file.readlines()
+            for i in range(0, len(lines), 8):
+                year = int(lines[i].strip())
+                operations_data[year] = {
+                    "mro_services_revenue": float(lines[i + 1].strip()),
+                    "partnership_revenue": float(lines[i + 2].strip()),
+                    "operating_expenses": float(lines[i + 3].strip()),
+                    "no_of_aircraft_in_fleet": int(lines[i + 4].strip()),
+                    "no_of_aircraft_sold_per_year": int(lines[i + 5].strip()),
+                    "gross_margin_percent": float(lines[i + 6].strip()),
+                    "debt_to_equity_ratio": float(lines[i + 7].strip())
+                }
+    except FileNotFoundError:
+        st.error("Operations-Data.txt file not found.")
     return operations_data
 
 def start_claeor_tool():
@@ -43,6 +47,10 @@ def start_claeor_tool():
     # Load default data
     assumptions = load_assumptions()
     operations_data = load_operations_data()
+
+    # Check if assumptions data is loaded
+    if not assumptions:
+        st.stop()
 
     # Display and modify assumptions
     st.header("Assumptions")
