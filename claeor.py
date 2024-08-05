@@ -157,7 +157,7 @@ def start_claeor_tool():
             for year, data in operational_data.items():
                 all_financials[year] = calculate_financials(year, assumptions, data)
 
-            df_financials = pd.DataFrame(all_fin ancials).T
+            df_financials = pd.DataFrame(all_financials).T
 
         st.write("Metrics at Fund's Exit (End of Year 10)")
         total_revenue_10 = df_financials["revenue"].sum()
