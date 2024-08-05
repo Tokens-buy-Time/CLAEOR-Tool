@@ -21,6 +21,7 @@ def start_claeor_tool():
         mro_revenue = operational_data["mro_revenue"]
         partnership_revenue = operational_data["partnership_revenue"]
         operating_expenses = operational_data["operating_expenses"]
+        capital_supplied = operational_data["capital_supplied"]
 
         revenue = assumptions["revenue_per_hour"] * billable_hours * num_aircraft
         aircraft_sale_revenue = assumptions["aircraft_price"] * aircraft_sold
@@ -35,13 +36,13 @@ def start_claeor_tool():
         tax = operating_profit * assumptions["tax_rate"]
         net_profit = operating_profit - interest - tax
 
-        assets = gross_profit - (interest + tax)
+        assets = gross_profit - (interest + tax) + capital_supplied
         liabilities = assumptions["fixed_costs"] * (assumptions["debt_to_equity_ratio"] / 100)
         equity = net_profit
 
         cash_flow_operating = net_profit
         cash_flow_investing = -depreciation
-        cash_flow_financing = assumptions["fixed_costs"] - interest
+        cash_flow_financing = assumptions["fixed_costs"] - interest + capital_supplied
         net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
         return {
@@ -59,7 +60,8 @@ def start_claeor_tool():
             "cash_flow_operating": cash_flow_operating,
             "cash_flow_investing": cash_flow_investing,
             "cash_flow_financing": cash_flow_financing,
-            "net_cash_flow": net_cash_flow
+            "net_cash_flow": net_cash_flow,
+            "capital_supplied": capital_supplied
         }
 
     if choice == "Home":
@@ -101,6 +103,7 @@ def start_claeor_tool():
         mro_revenue = st.number_input("MRO Services Revenue", min_value=0.0)
         partnership_revenue = st.number_input("Partnership Revenue", min_value=0.0)
         operating_expenses = st.number_input("Operating Expenses", min_value=0.0)
+        capital_supplied = st.number_input("Capital Supplied by Investors", min_value=0.0)
 
         if st.button("Save Operational Data"):
             st.session_state["operational_data"][year] = {
@@ -109,7 +112,8 @@ def start_claeor_tool():
                 "aircraft_sold": aircraft_sold,
                 "mro_revenue": mro_revenue,
                 "partnership_revenue": partnership_revenue,
-                "operating_expenses": operating_expenses
+                "operating_expenses": operating_expenses,
+                "capital_supplied": capital_supplied
             }
             st.success(f"Operational data for Year {year} saved!")
 
@@ -154,10 +158,13 @@ def start_claeor_tool():
             operational_data = st.session_state["operational_data"]
 
             all_financials = {}
+            total_capital_supplied = 0
             for year, data in operational_data.items():
-                all_financials[year] = calculate_financials(year, assumptions, data)
+                financials = calculate_financials(year, assumptions, data)
+                all_financials[year] = financial s
+total_capital_supplied += financials[“capital_supplied”]
 
-            df_financials = pd.DataFrame(all_financials).T
+        df_financials = pd.DataFrame(all_financials).T
 
         st.write("Metrics at Fund's Exit (End of Year 10)")
         total_revenue_10 = df_financials["revenue"].sum()
@@ -171,6 +178,7 @@ def start_claeor_tool():
         st.write(f"Total Assets at Year 10: ${total_assets_10:.2f}")
         st.write(f"Total Liabilities at Year 10: ${total_liabilities_10:.2f}")
         st.write(f"Total Equity at Year 10: ${total_equity_10:.2f}")
+        st.write(f"Total Capital Supplied by Investors over 10 years: ${total_capital_supplied:.2f}")
 
         irr = ((total_net_profit_10 / assumptions["fixed_costs"]) ** (1 / 10)) - 1
         roi = (total_net_profit_10 / assumptions["fixed_costs"]) * 100
@@ -181,4 +189,4 @@ def start_claeor_tool():
         st.warning("Please input assumptions and operational data first.")
 
 if __name__ == "__main__":
-    start_claeor_tool()
+     start_claeor_tool()
