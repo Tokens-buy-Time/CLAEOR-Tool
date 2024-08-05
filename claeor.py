@@ -189,5 +189,4 @@ def start_claeor_tool():
     else:
         st.warning("Please input assumptions and operational data first.")
 
-start_claeor_tool()
     
