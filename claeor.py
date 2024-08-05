@@ -66,7 +66,7 @@ def start_claeor_tool():
 
     if choice == "Home":
         st.subheader("Welcome to the Caribbean Luxury Aerial Experience Operations Research Tool")
-        st.write("Navigate through the menu to input assumptions, operational data, view financial statements, and perform sensitivity analysis.")
+        st.write("Navigate through the menu to input assumptions, operational data, view financial statements and review performance metrics.")
 
     elif choice == "Assumptions Input":
         st.subheader("Input Assumptions")
