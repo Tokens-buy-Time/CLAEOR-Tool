@@ -161,8 +161,8 @@ def start_claeor_tool():
             total_capital_supplied = 0
             for year, data in operational_data.items():
                 financials = calculate_financials(year, assumptions, data)
-                all_financials[year] = financials
-total_capital_supplied += financials[“capital_supplied”]
+                all_financials[year] = financials 
+                total_capital_supplied += financials[“capital_supplied”]
 
         df_financials = pd.DataFrame(all_financials).T
 
@@ -172,8 +172,7 @@ total_capital_supplied += financials[“capital_supplied”]
         total_assets_10 = df_financials["assets"].sum()
         total_liabilities_10 = df_financials["liabilities"].sum()
         total_equity_10 = df_financials["equity"].sum()
-        total_capital_supplied_10 =
-df_financials[“capital_supplied”].sum()
+        total_capital_supplied_10 = df_financials[“capital_supplied”].sum()
 
         st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
         st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
