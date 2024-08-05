@@ -1,5 +1,4 @@
 
-
 import streamlit as st
 import pandas as pd
 
@@ -15,18 +14,29 @@ def start_claeor_tool():
     if "operational_data" not in st.session_state:
         st.session_state["operational_data"] = {}
 
-    def calculate_financials(year, assumptions, billable_hours):
-        revenue = assumptions["revenue_per_hour"] * billable_hours
-        cogs = assumptions["variable_cost_per_hour"] * billable_hours
-        gross_profit = revenue - cogs
+    def calculate_financials(year, assumptions, operational_data):
+        billable_hours = operational_data["billable_hours"]
+        num_aircraft = operational_data["num_aircraft"]
+        aircraft_sold = operational_data["aircraft_sold"]
+        mro_revenue = operational_data["mro_revenue"]
+        partnership_revenue = operational_data["partnership_revenue"]
+        operating_expenses = operational_data["operating_expenses"]
+
+        revenue = assumptions["revenue_per_hour"] * billable_hours * num_aircraft
+        aircraft_sale_revenue = assumptions["aircraft_price"] * aircraft_sold
+        total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sale_revenue
+
+        cogs = assumptions["variable_cost_per_hour"] * billable_hours * num_aircraft
+        gross_profit = total_revenue * (assumptions["gross_margin"] / 100)
+
         depreciation = assumptions["fixed_costs"] * assumptions["depreciation_rate"]
-        operating_profit = gross_profit - assumptions["fixed_costs"] - depreciation
+        operating_profit = gross_profit - assumptions["fixed_costs"] - depreciation - operating_expenses
         interest = assumptions["fixed_costs"] * assumptions["interest_rate"]
         tax = operating_profit * assumptions["tax_rate"]
         net_profit = operating_profit - interest - tax
 
         assets = gross_profit - (interest + tax)
-        liabilities = assumptions["fixed_costs"]
+        liabilities = assumptions["fixed_costs"] * (assumptions["debt_to_equity_ratio"] / 100)
         equity = net_profit
 
         cash_flow_operating = net_profit
@@ -35,7 +45,7 @@ def start_claeor_tool():
         net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
         return {
-            "revenue": revenue,
+            "revenue": total_revenue,
             "cogs": cogs,
             "gross_profit": gross_profit,
             "depreciation": depreciation,
@@ -64,6 +74,9 @@ def start_claeor_tool():
         depreciation_rate = st.number_input("Depreciation Rate", min_value=0.0, max_value=1.0)
         interest_rate = st.number_input("Interest Rate", min_value=0.0, max_value=1.0)
         tax_rate = st.number_input("Tax Rate", min_value=0.0, max_value=1.0)
+        gross_margin = st.number_input("Gross Margin (%)", min_value=0.0, max_value=100.0)
+        debt_to_equity_ratio = st.number_input("Debt to Equity Ratio (%)", min_value=0.0, max_value=100.0)
+        aircraft_price = st.number_input("Price per Aircraft", min_value=0.0)
 
         if st.button("Save Assumptions"):
             st.session_state["assumptions"] = {
@@ -72,7 +85,10 @@ def start_claeor_tool():
                 "fixed_costs": fixed_costs,
                 "depreciation_rate": depreciation_rate,
                 "interest_rate": interest_rate,
-                "tax_rate": tax_rate
+                "tax_rate": tax_rate,
+                "gross_margin": gross_margin,
+                "debt_to_equity_ratio": debt_to_equity_ratio,
+                "aircraft_price": aircraft_price
             }
             st.success("Assumptions saved!")
 
@@ -80,9 +96,21 @@ def start_claeor_tool():
         st.subheader("Input Operational Data")
         year = st.selectbox("Year", range(1, 11))
         billable_hours = st.number_input("Billable Hours", min_value=0)
+        num_aircraft = st.number_input("Number of Aircraft in Fleet", min_value=0)
+        aircraft_sold = st.number_input("Number of Aircraft Sold", min_value=0)
+        mro_revenue = st.number_input("MRO Services Revenue", min_value=0.0)
+        partnership_revenue = st.number_input("Partnership Revenue", min_value=0.0)
+        operating_expenses = st.number_input("Operating Expenses", min_value=0.0)
 
         if st.button("Save Operational Data"):
-            st.session_state["operational_data"][year] = billable_hours
+            st.session_state["operational_data"][year] = {
+                "billable_hours": billable_hours,
+                "num_aircraft": num_aircraft,
+                "aircraft_sold": aircraft_sold,
+                "mro_revenue": mro_revenue,
+                "partnership_revenue": partnership_revenue,
+                "operating_expenses": operating_expenses
+            }
             st.success(f"Operational data for Year {year} saved!")
 
     elif choice == "Financial Statements":
@@ -91,9 +119,9 @@ def start_claeor_tool():
 
         if st.session_state["assumptions"] and statement_year in st.session_state["operational_data"]:
             assumptions = st.session_state["assumptions"]
-            billable_hours = st.session_state["operational_data"][statement_year]
+            operational_data = st.session_state["operational_data"][statement_year]
 
-            financials = calculate_financials(statement_year, assumptions, billable_hours)
+            financials = calculate_financials(statement_year, assumptions, operational_data)
 
             st.write(f"Income Statement for Year {statement_year}")
             st.write(f"Revenue: ${financials['revenue']:.2f}")
@@ -126,32 +154,31 @@ def start_claeor_tool():
             operational_data = st.session_state["operational_data"]
 
             all_financials = {}
-            for year, billable_hours in operational_data.items():
-                all_financials[year] = calculate_financials(year, assumptions, billable_hours)
+            for year, data in operational_data.items():
+                all_financials[year] = calculate_financials(year, assumptions, data)
 
-            df_financials = pd.DataFrame(all_financials).T
+            df_financials = pd.DataFrame(all_fin ancials).T
 
-            st.write("Key Metrics")
-            st.write(f"Total Revenue: ${df_financials['revenue'].sum():.2f}")
-            st.write(f"Total Net Profit: ${df_financials['net_profit'].sum():.2f}")
+        st.write("Metrics at Fund's Exit (End of Year 10)")
+        total_revenue_10 = df_financials["revenue"].sum()
+        total_net_profit_10 = df_financials["net_profit"].sum()
+        total_assets_10 = df_financials["assets"].sum()
+        total_liabilities_10 = df_financials["liabilities"].sum()
+        total_equity_10 = df_financials["equity"].sum()
 
-            sensitivity_results = []
-            for revenue_adjustment in range(-20, 21, 5):
-                adjusted_assumptions = assumptions.copy()
-                adjusted_assumptions["revenue_per_hour"] *= (1 + revenue_adjustment / 100)
-                total_net_profit = sum(calculate_financials(year, adjusted_assumptions, billable_hours)["net_profit"]
-                                       for year, billable_hours in operational_data.items())
-                sensitivity_results.append((revenue_adjustment, total_net_profit))
+        st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
+        st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
+        st.write(f"Total Assets at Year 10: ${total_assets_10:.2f}")
+        st.write(f"Total Liabilities at Year 10: ${total_liabilities_10:.2f}")
+        st.write(f"Total Equity at Year 10: ${total_equity_10:.2f}")
 
-            df_sensitivity = pd.DataFrame(sensitivity_results, columns=["Revenue Adjustment (%)", "Total Net Profit"])
+        irr = ((total_net_profit_10 / assumptions["fixed_costs"]) ** (1 / 10)) - 1
+        roi = (total_net_profit_10 / assumptions["fixed_costs"]) * 100
 
-            st.write("Sensitivity Analysis: Varying Revenue per Hour")
-            st.write(df_sensitivity)
+        st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
+        st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
+    else:
+        st.warning("Please input assumptions and operational data first.")
 
-            st.line_chart(df_sensitivity.set_index("Revenue Adjustment (%)"))
-
-        else:
-            st.warning("Please input assumptions and operational data first.")
-
-if __name__ == "__main__":
-    start_claeor_tool()
+if name == ‘main’:
+start_claeor_tool()
