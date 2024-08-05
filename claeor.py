@@ -182,7 +182,7 @@ def start_claeor_tool():
         st.write(f"Total Capital Supplied by Investors over 10 years: ${total_capital_supplied:.2f}")
 
         irr = ((total_net_profit_10 / assumptions["fixed_costs"]) ** (1 / 10)) - 1
-        roi = (total_net_profit_10 / Total_capital_supplied_10)
+        roi = (total_net_profit_10 / total_capital_supplied_10)
 
         st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
         st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
