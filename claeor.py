@@ -4,14 +4,12 @@ import streamlit as st
 # Initialize session state variables for assumptions and operations data if they don't exist
 if "assumptions" not in st.session_state:
     st.session_state["assumptions"] = [
-        169.50,  # Variable cost per hour
-        113.00,  # Fixed cost per hour
-        24200.00, # Hourly rental rate
-        0.0833,  # Interest rate
-        0.06,    # Amortization rate
-        0.25,    # Tax rate
-        50.0,    # Number of employees
-        33.0,    # Total working days per year
+        169.50,  # Hourly Rental Rate
+        113.00,  # Variable cost per hour
+        24200.00, # Fixed Cost
+        0.0833,  # Amortization rate
+        0.06,    # Interest rate
+        0.25,    # Tax Rate
         386000.00 # Acquisition cost per aircraft
     ]
 
@@ -34,14 +32,12 @@ if "operations_data" not in st.session_state:
 def assumptions_screen():
     st.header("Assumptions")
     assumption_labels = [
-        "Variable Cost per Hour",
-        "Fixed Cost per Hour",
         "Hourly Rental Rate",
-        "Interest Rate",
+        "Variable Cost per Hour",
+        "Fixed Cost",
         "Amortization Rate",
-        "Tax Rate",
-        "Number of Employees",
-        "Total Working Days per Year",
+        "Interest Rate",
+        "Tax Rate"
         "Acquisition Cost per Aircraft"
     ]
 
