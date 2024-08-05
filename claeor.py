@@ -5,7 +5,7 @@ import streamlit as st
 # Function to read default data from Assumptions.txt
 def load_assumptions():
     assumptions = {}
-    with open('Assumptions.txt', 'r') as file:
+    with open('/mnt/data/Assumptions.txt', 'r') as file:
         lines = file.readlines()
         assumptions["fixed_costs"] = float(lines[0].strip())
         assumptions["variable_costs_per_hour"] = float(lines[1].strip())
@@ -21,7 +21,7 @@ def load_assumptions():
 # Function to read default data from Operations-Data.txt
 def load_operations_data():
     operations_data = {}
-    with open('Operations-Data.txt', 'r') as file:
+    with open('/mnt/data/Operations-Data.txt', 'r') as file:
         lines = file.readlines()
         for i in range(0, len(lines), 8):
             year = int(lines[i].strip())
@@ -51,6 +51,14 @@ def start_claeor_tool():
     aircraft_acquisition_cost = st.number_input("Aircraft Acquisition Cost", value=assumptions["aircraft_acquisition_cost"])
     capital_supplied = st.number_input("Capital Supplied by Investors", value=assumptions["capital_supplied"])
 
+    if st.button("Save Assumptions"):
+        assumptions["fixed_costs"] = fixed_costs
+        assumptions["variable_costs_per_hour"] = variable_costs_per_hour
+        assumptions["hours_per_year"] = hours_per_year
+        assumptions["aircraft_acquisition_cost"] = aircraft_acquisition_cost
+        assumptions["capital_supplied"] = capital_supplied
+        st.success("Assumptions saved successfully!")
+
     # Display and modify operations data
     st.header("Operational Data")
     all_operational_data = {}
@@ -63,7 +71,7 @@ def start_claeor_tool():
         no_of_aircraft_sold_per_year = st.number_input(f"No. of Aircraft Sold per Year (Year {year})", value=operations_data[year]["no_of_aircraft_sold_per_year"])
         gross_margin_percent = st.number_input(f"Gross Margin % (Year {year})", value=operations_data[year]["gross_margin_percent"])
         debt_to_equity_ratio = st.number_input(f"Debt to Equity Ratio (Year {year})", value=operations_data[year]["debt_to_equity_ratio"])
-        
+
         all_operational_data[year] = {
             "mro_services_revenue": mro_services_revenue,
             "partnership_revenue": partnership_revenue,
@@ -74,14 +82,11 @@ def start_claeor_tool():
             "debt_to_equity_ratio": debt_to_equity_ratio
         }
 
-    # Save and continue execution
-    if st.button("Save and Execute"):
-        assumptions["fixed_costs"] = fixed_costs
-        assumptions["variable_costs_per_hour"] = variable_costs_per_hour
-        assumptions["hours_per_year"] = hours_per_year
-        assumptions["aircraft_acquisition_cost"] = aircraft_acquisition_cost
-        assumptions["capital_supplied"] = capital_supplied
+    if st.button("Save Operational Data"):
+        st.success("Operational data saved successfully!")
 
+    # Execute calculations
+    if st.button("Execute Calculations"):
         all_financials = {}
         total_capital_supplied = 0
 
