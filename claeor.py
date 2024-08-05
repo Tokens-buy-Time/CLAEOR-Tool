@@ -180,5 +180,5 @@ def start_claeor_tool():
     else:
         st.warning("Please input assumptions and operational data first.")
 
-if name == ‘main’:
+if __name__ == "__main__":
 start_claeor_tool()
