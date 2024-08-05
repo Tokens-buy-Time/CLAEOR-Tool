@@ -1,161 +1,76 @@
-import pandas as pd
+
 import streamlit as st
 
-# Function to read default data from Assumptions.txt
-def load_assumptions():
-    assumptions = {}
-    try:
-        with open('/mnt/data/Assumptions.txt', 'r') as file:
-            lines = file.readlines()
-            assumptions["fixed_costs"] = float(lines[0].strip())
-            assumptions["variable_costs_per_hour"] = float(lines[1].strip())
-            assumptions["hours_per_year"] = int(lines[2].strip())
-            assumptions["aircraft_acquisition_cost"] = float(lines[3].strip())
-            assumptions["no_of_aircraft_in_fleet"] = int(lines[4].strip())
-            assumptions["no_of_aircraft_sold_per_year"] = int(lines[5].strip())
-            assumptions["gross_margin_percent"] = float(lines[6].strip())
-            assumptions["debt_to_equity_ratio"] = float(lines[7].strip())
-            assumptions["capital_supplied"] = float(lines[8].strip())
-    except FileNotFoundError:
-        st.error("Assumptions.txt file not found.")
-    return assumptions
-
-# Function to read default data from Operations-Data.txt
-def load_operations_data():
-    operations_data = {}
-    try:
-        with open('/mnt/data/Operations-Data.txt', 'r') as file:
-            lines = file.readlines()
-            for i in range(0, len(lines), 8):
-                year = int(lines[i].strip())
-                operations_data[year] = {
-                    "mro_services_revenue": float(lines[i + 1].strip()),
-                    "partnership_revenue": float(lines[i + 2].strip()),
-                    "operating_expenses": float(lines[i + 3].strip()),
-                    "no_of_aircraft_in_fleet": int(lines[i + 4].strip()),
-                    "no_of_aircraft_sold_per_year": int(lines[i + 5].strip()),
-                    "gross_margin_percent": float(lines[i + 6].strip()),
-                    "debt_to_equity_ratio": float(lines[i + 7].strip())
-                }
-    except FileNotFoundError:
-        st.error("Operations-Data.txt file not found.")
-    return operations_data
-
 def start_claeor_tool():
+    # Placeholder values for assumptions
+    assumptions = [
+        169.50,  # Variable cost per hour
+        113.00,  # Fixed cost per hour
+        24200.00, # Hourly rental rate
+        0.0833,  # Interest rate
+        0.06,    # Amortization rate
+        0.25,    # Tax rate
+        50.0,    # Number of employees
+        33.0,    # Total working days per year
+        386000.00 # Acquisition cost per aircraft
+    ]
+
+    # Placeholder values for operations data per year
+    operations_data = [
+        # Format: [Year, No. of aircraft in fleet, No. of aircraft sold per year, Gross Margin %, Debt to Equity ratio, MRO services Revenue, Partnership Revenue, Operating Expenses]
+        [1, 250, 20, 10, 300000, 100000, 3000000, 60000000],
+        [2, 250, 20, 10, 400000, 500000, 3000000, 0],
+        [3, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [4, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [5, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [6, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [7, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [8, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [9, 500, 20, 10, 1000000, 1000000, 3000000, 0],
+        [10, 500, 20, 10, 1000000, 1000000, 3000000, 0]
+    ]
+
+    # Display and allow modification of assumptions
     st.title("CLAEOR Tool")
-
-    # Load default data
-    assumptions = load_assumptions()
-    operations_data = load_operations_data()
-
-    # Check if assumptions data is loaded
-    if not assumptions:
-        st.stop()
-
-    # Display and modify assumptions
     st.header("Assumptions")
-    fixed_costs = st.number_input("Fixed Costs", value=assumptions["fixed_costs"])
-    variable_costs_per_hour = st.number_input("Variable Costs per Hour", value=assumptions["variable_costs_per_hour"])
-    hours_per_year = st.number_input("Hours per Year", value=assumptions["hours_per_year"])
-    aircraft_acquisition_cost = st.number_input("Aircraft Acquisition Cost", value=assumptions["aircraft_acquisition_cost"])
-    capital_supplied = st.number_input("Capital Supplied by Investors", value=assumptions["capital_supplied"])
+    assumption_labels = [
+        "Variable Cost per Hour",
+        "Fixed Cost per Hour",
+        "Hourly Rental Rate",
+        "Interest Rate",
+        "Amortization Rate",
+        "Tax Rate",
+        "Number of Employees",
+        "Total Working Days per Year",
+        "Acquisition Cost per Aircraft"
+    ]
+    
+    for i, label in enumerate(assumption_labels):
+        assumptions[i] = st.number_input(label, value=assumptions[i])
 
     if st.button("Save Assumptions"):
-        assumptions["fixed_costs"] = fixed_costs
-        assumptions["variable_costs_per_hour"] = variable_costs_per_hour
-        assumptions["hours_per_year"] = hours_per_year
-        assumptions["aircraft_acquisition_cost"] = aircraft_acquisition_cost
-        assumptions["capital_supplied"] = capital_supplied
-        st.success("Assumptions saved successfully!")
+        st.success("Assumptions saved!")
 
-    # Display and modify operations data
-    st.header("Operational Data")
-    all_operational_data = {}
-    for year in range(1, 11):
-        st.subheader(f"Year {year}")
-        mro_services_revenue = st.number_input(f"MRO Services Revenue (Year {year})", value=operations_data[year]["mro_services_revenue"])
-        partnership_revenue = st.number_input(f"Partnership Revenue (Year {year})", value=operations_data[year]["partnership_revenue"])
-        operating_expenses = st.number_input(f"Operating Expenses (Year {year})", value=operations_data[year]["operating_expenses"])
-        no_of_aircraft_in_fleet = st.number_input(f"No. of Aircraft in Fleet (Year {year})", value=operations_data[year]["no_of_aircraft_in_fleet"])
-        no_of_aircraft_sold_per_year = st.number_input(f"No. of Aircraft Sold per Year (Year {year})", value=operations_data[year]["no_of_aircraft_sold_per_year"])
-        gross_margin_percent = st.number_input(f"Gross Margin % (Year {year})", value=operations_data[year]["gross_margin_percent"])
-        debt_to_equity_ratio = st.number_input(f"Debt to Equity Ratio (Year {year})", value=operations_data[year]["debt_to_equity_ratio"])
+    # Display and allow modification of operations data
+    st.header("Operations Data")
+    for year_data in operations_data:
+        st.subheader(f"Year {year_data[0]}")
+        year_data[1] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[0]})", value=year_data[1])
+        year_data[2] = st.number_input(f"No. of Aircraft Sold per Year (Year {year_data[0]})", value=year_data[2])
+        year_data[3] = st.number_input(f"Gross Margin % (Year {year_data[0]})", value=year_data[3])
+        year_data[4] = st.number_input(f"Debt to Equity Ratio (Year {year_data[0]})", value=year_data[4])
+        year_data[5] = st.number_input(f"MRO Services Revenue (Year {year_data[0]})", value=year_data[5])
+        year_data[6] = st.number_input(f"Partnership Revenue (Year {year_data[0]})", value=year_data[6])
+        year_data[7] = st.number_input(f"Operating Expenses (Year {year_data[0]})", value=year_data[7])
 
-        all_operational_data[year] = {
-            "mro_services_revenue": mro_services_revenue,
-            "partnership_revenue": partnership_revenue,
-            "operating_expenses": operating_expenses,
-            "no_of_aircraft_in_fleet": no_of_aircraft_in_fleet,
-            "no_of_aircraft_sold_per_year": no_of_aircraft_sold_per_year,
-            "gross_margin_percent": gross_margin_percent,
-            "debt_to_equity_ratio": debt_to_equity_ratio
-        }
+        if st.button(f"Save Year {year_data[0]} Data"):
+            st.success(f"Year {year_data[0]} data saved!")
 
-    if st.button("Save Operational Data"):
-        st.success("Operational data saved successfully!")
+    # Add functionality to save inputs and continue execution
+    st.button("Run Analysis")
 
-    # Execute calculations
-    if st.button("Execute Calculations"):
-        all_financials = {}
-        total_capital_supplied = 0
+    # Code to process the data and display performance metrics will go here
 
-        for year in range(1, 11):
-            financials = calculate_financials(
-                year,
-                assumptions["fixed_costs"],
-                assumptions["variable_costs_per_hour"],
-                assumptions["hours_per_year"],
-                assumptions["aircraft_acquisition_cost"],
-                all_operational_data[year]["no_of_aircraft_in_fleet"],
-                all_operational_data[year]["no_of_aircraft_sold_per_year"],
-                all_operational_data[year]["gross_margin_percent"],
-                all_operational_data[year]["debt_to_equity_ratio"],
-                all_operational_data[year]["mro_services_revenue"],
-                all_operational_data[year]["partnership_revenue"],
-                all_operational_data[year]["operating_expenses"]
-            )
-            all_financials[year] = financials
-            total_capital_supplied += assumptions["capital_supplied"]
-
-        df_financials = pd.DataFrame(all_financials).T
-
-        st.write("Metrics at Fund's Exit (End of Year 10)")
-        total_revenue_10 = df_financials["revenue"].sum()
-        total_net_profit_10 = df_financials["net_profit"].sum()
-        total_assets_10 = df_financials["assets"].sum()
-        total_liabilities_10 = df_financials["liabilities"].sum()
-        total_equity_10 = df_financials["equity"].sum()
-
-        st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
-        st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
-        st.write(f"Total Assets at Year 10: ${total_assets_10:.2f}")
-        st.write(f"Total Liabilities at Year 10: ${total_liabilities_10:.2f}")
-        st.write(f"Total Equity at Year 10: ${total_equity_10:.2f}")
-        st.write(f"Total Capital Supplied by Investors over 10 years: ${total_capital_supplied:.2f}")
-
-        irr = ((total_net_profit_10 / assumptions["fixed_costs"]) ** (1 / 10)) - 1
-        roi = (total_net_profit_10 / assumptions["fixed_costs"]) * 100
-
-        st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
-        st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
-
-def calculate_financials(year, fixed_costs, variable_costs_per_hour, hours_per_year, aircraft_acquisition_cost, no_of_aircraft_in_fleet, no_of_aircraft_sold_per_year, gross_margin_percent, debt_to_equity_ratio, mro_services_revenue, partnership_revenue, operating_expenses):
-    # Your financial calculation logic here
-    revenue = (no_of_aircraft_in_fleet * hours_per_year * variable_costs_per_hour * (1 + gross_margin_percent / 100)) + mro_services_revenue + partnership_revenue
-    costs = fixed_costs + (variable_costs_per_hour * hours_per_year * no_of_aircraft_in_fleet) + operating_expenses
-    net_profit = revenue - costs
-    assets = no_of_aircraft_in_fleet * aircraft_acquisition_cost
-    liabilities = assets * debt_to_equity_ratio
-    equity = assets - liabilities
-
-    return {
-        "revenue": revenue,
-        "costs": costs,
-        "net_profit": net_profit,
-        "assets": assets,
-        "liabilities": liabilities,
-        "equity": equity
-    }
-
-if __name__ == '__main__':
+# Run the app
+if __name__ == "__main__":
     start_claeor_tool()
