@@ -40,9 +40,9 @@ def assumptions_screen():
         "Tax Rate"
         "Acquisition Cost per Aircraft"
     ]
-
+    
     for i, label in enumerate(assumption_labels):
-        st.session_state["assumptions"][i] = st.number_input(label, value=st.session_state["assumptions"][i])
+    st.session_state["assumptions"][i] = st.number_input(label, value=st.session_state["assumptions"][i])
 
     if st.button("Save Assumptions"):
         st.success("Assumptions saved!")
@@ -50,6 +50,9 @@ def assumptions_screen():
 # Function to display and save operations data
 def operations_data_screen():
     st.header("Operations Data")
+
+    i=1
+    if i<11
        for year_data[i,j] in st.session_state["operations_data"]:
            st.subheader(f"Year {year_data[i,1]}")
            year_data[i,2] = st.number_input(f"No. of Billable per annum (Year {year_data[i,j]})", value=year_data[i,2])
@@ -64,7 +67,8 @@ def operations_data_screen():
 
            if st.button(f"Save Year {year_data[i,1]} Data"):
                st.success(f"Year {year_data[i,1]} data saved!")
-        i=i+1
+           i=i+1
+        elif
 
 # Function to display financial statements
 def financial_statements_screen():
