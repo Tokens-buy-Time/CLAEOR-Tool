@@ -37,7 +37,7 @@ def assumptions_screen():
         "Fixed Cost",
         "Amortization Rate",
         "Interest Rate",
-        "Tax Rate"
+        "Tax Rate",
         "Acquisition Cost per Aircraft"
     ]
     
@@ -50,24 +50,40 @@ def assumptions_screen():
 # Function to display and save operations data
 def operations_data_screen():
     st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "No. of aircraft in fleet", 
+        "No. of aircraft sold in year", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
 
+
+= st.number_input(Ops_label, value=st.session_state["Operations_data"][2])
+    
+    
     i=1
     if i<11:
-        for i, year_data[i,j] in st.session_state["operations_data"]:
-            st.subheader(f"Year {year_data[i,1]}")
-            year_data[i,2] = st.number_input(f"No. of Billable per annum (Year {year_data[i,j]})", value=year_data[i,2])
-            year_data[i,3] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[i,j]})", value=year_data[i,3])
-            year_data[i,4] = st.number_input(f"No. of Aircraft Sold per Year (Year {year_data[i,j]})", value=year_data[i,4])
-            year_data[i,5] = st.number_input(f"Gross Margin % (Year {year_data[i,j]})", value=year_data[i,5])
-            year_data[i,6] = st.number_input(f"Debt to Equity Ratio (Year {year_data[i,j]})", value=year_data[i,6])
-            year_data[i,7] = st.number_input(f"MRO Services Revenue (Year {year_data[i,j]})", value=year_data[i,7])
-            year_data[i,8] = st.number_input(f"Partnership Revenue (Year {year_data[i,j]})", value=year_data[i,8])
-            year_data[i,9] = st.number_input(f"Operating Expenses (Year {year_data[i,j]})", value=year_data[i,9])
-            year_data[i,10] = st.number_input(f"Investor Capital Call (Year {year_data[i,j]})", value=year_data[i,10])
+       for i, year_data in enumerate(Ops_lables):
+           st.subheader(f"Year {year_data[i,1]}")
+           st.session_state["operations_data"][i,2] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,2])
+           st.session_state["operations_data"][i,3] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,3])
+           st.session_state["operations_data"][i,4] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,4])
+           st.session_state["operations_data"][i,5] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,5])
+           st.session_state["operations_data"][i,6] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,6])
+           st.session_state["operations_data"][i,7] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,7])
+           st.session_state["operations_data"][i,8] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,8])
+           st.session_state["operations_data"][i,9] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,9])
+           st.session_state["operations_data"][i,10] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,10])
 
-            if st.button(f"Save Year {year_data[i,1]} Data"):
-                st.success(f"Year {year_data[i,1]} data saved!")
-            i=i+1
+           if st.button(f"Save Year {year_data[i,1]} Data"):
+              st.success(f"Year {year_data[i,1]} data saved!")
+           i=i+1
 
 # Function to display financial statements
 def financial_statements_screen():
