@@ -65,7 +65,7 @@ def operations_data_screen():
     
     i=1
     if i<11:
-       for i, year_data in enumerate(operations_data):
+       for i, year_data in (operations_data):
            st.subheader(f"{Ops_labels[1]}")
            st.session_state["operations_data"][2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][2])
            st.session_state["operations_data"][3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][3])
