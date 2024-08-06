@@ -66,7 +66,7 @@ def operations_data_screen():
     i=1
     if i<11:
        st.subheader(f"{Ops_labels[0]} {i}")
-       st.session_state["operations_data"][{2}] = st.number_input(Ops_labels, value=st.session_state["operations_data"][{2}])
+       st.session_state["operations_data"][2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][2])
        st.session_state["operations_data"][3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][3])
        st.session_state["operations_data"][4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][4])
        st.session_state["operations_data"][5] = st.number_input(Ops_labels, value=st.session_state["operations_data"][5])
@@ -79,8 +79,10 @@ def operations_data_screen():
        if st.button(f"Save year's input data"):
           st.success(f"Year's input data saved!")
           i=i+1
-           
+
+
 # st.subheader(f"{Ops_labels[0]} {i}")
+
 
 # Function to display financial statements
 def financial_statements_screen():
