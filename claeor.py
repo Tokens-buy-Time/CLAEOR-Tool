@@ -65,20 +65,32 @@ def operations_data_screen():
     
     i=1
     for i in range(101):
-       st.subheader(f"{Ops_labels[0]} {i}")
-       st.session_state["operations_data"][=i+1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+1])
-       st.session_state["operations_data"][=i+2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+2])
-       st.session_state["operations_data"][=i+3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+3])
-       st.session_state["operations_data"][=i+4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+4])
-       st.session_state["operations_data"][=i+5] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+5])
-       st.session_state["operations_data"][=i+6] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+6])
-       st.session_state["operations_data"][=i+7] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+7])
-       st.session_state["operations_data"][=i+8] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+8])
-       st.session_state["operations_data"][=i+9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][=i+9])
+        
+        n1=1+1
+        n2=1+2
+        n3=1+3
+        n4=1+4
+        n5=1+5
+        n6=1+6
+        n7=1+7
+        n8=1+8
+        n9=1+9
+        Year_n = math.ceil(i/10)
+        
+        st.subheader(f"{Ops_labels[0]} {Year_n}")
+        st.session_state["operations_data"][m1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n1])
+        st.session_state["operations_data"][n2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n2])
+        st.session_state["operations_data"][n3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n3])
+        st.session_state["operations_data"][n4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n4])
+        st.session_state["operations_data"][n5] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n5])
+        st.session_state["operations_data"][n6] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n6])
+        st.session_state["operations_data"][n7] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n7])
+        st.session_state["operations_data"][n8] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n8])
+        st.session_state["operations_data"][n9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n9])
 
        if st.button(f"Save year's input data"):
           st.success(f"Year's input data saved!")
-          i=i+1
+          i=i+10
 
 
 # st.subheader(f"{Ops_labels[0]} {i}")
