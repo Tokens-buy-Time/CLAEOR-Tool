@@ -65,7 +65,7 @@ def operations_data_screen():
     
     i=1
     if i<11:
-       st.subheader(f"{Ops_labels[0]} : i")
+       st.subheader(f"{Ops_labels[0]} [i]")
 # st.session_state["operations_data"][2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][2])
 # st.session_state["operations_data"][3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][3])
 # st.session_state["operations_data"][4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][4])
