@@ -1,5 +1,6 @@
 
 import streamlit as st
+import math
 
 # Initialize session state variables for assumptions and operations data if they don't exist
 if "assumptions" not in st.session_state:
