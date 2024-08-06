@@ -94,9 +94,6 @@ def operations_data_screen():
            i=i+10
 
 
-# st.subheader(f"{Ops_labels[0]} {i}")
-
-
 # Function to display financial statements
 def financial_statements_screen():
     st.header("Financial Statements")
