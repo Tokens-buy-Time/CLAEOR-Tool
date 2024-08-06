@@ -79,7 +79,6 @@ def operations_data_screen():
        if st.button(f"Save year's input data"):
           st.success(f"Year's input data saved!")
           i=i+1
-    elif
     st.subheader(f"{Ops_labels[0]} {i}")
 
 # Function to display financial statements
