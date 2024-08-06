@@ -67,19 +67,19 @@ def operations_data_screen():
     i=1
     for i in range(101):
         
-        n1=1+1
-        n2=1+2
-        n3=1+3
-        n4=1+4
-        n5=1+5
-        n6=1+6
-        n7=1+7
-        n8=1+8
-        n9=1+9
+        n1=i+1
+        n2=i+2
+        n3=i+3
+        n4=i+4
+        n5=i+5
+        n6=i+6
+        n7=i+7
+        n8=i+8
+        n9=i+9
         Year_n = math.ceil(i/10)
         
         st.subheader(f"{Ops_labels[0]} {Year_n}")
-        st.session_state["operations_data"][m1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n1])
+        st.session_state["operations_data"][n1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n1])
         st.session_state["operations_data"][n2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n2])
         st.session_state["operations_data"][n3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n3])
         st.session_state["operations_data"][n4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n4])
