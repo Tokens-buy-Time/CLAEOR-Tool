@@ -77,8 +77,8 @@ def operations_data_screen():
            st.session_state["operations_data"][9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][9])
            st.session_state["operations_data"][10] = st.number_input(Ops_labels, value=st.session_state["operations_data"][10])
 
-           if st.button(f"Save Year {year_data[i]} Data"):
-              st.success(f"Year {year_data[i]} data saved!")
+           if st.button(f"Save Year {year_data} Data"):
+              st.success(f"Year {year_data} data saved!")
            i=i+1
 
 # Function to display financial statements
