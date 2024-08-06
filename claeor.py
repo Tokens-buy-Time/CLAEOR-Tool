@@ -62,15 +62,11 @@ def operations_data_screen():
         "Operating Expenses $", 
         "Investor Capital Calls $"
     ]
-
-
-= st.number_input(Ops_label, value=st.session_state["Operations_data"][2])
-    
     
     i=1
     if i<11:
        for i, year_data in enumerate(Ops_lables):
-           st.subheader(f"Year {year_data[i,1]}")
+           st.subheader(year_data[1],i)
            st.session_state["operations_data"][i,2] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,2])
            st.session_state["operations_data"][i,3] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,3])
            st.session_state["operations_data"][i,4] = st.number_input(Ops_label, value=st.session_state["Operations_data"][i,4])
