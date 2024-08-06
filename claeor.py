@@ -53,7 +53,7 @@ def operations_data_screen():
 
     i=1
     if i<11:
-        for year_data in st.session_state["operations_data"]:
+        for i, year_data[i,j] in st.session_state["operations_data"]:
             st.subheader(f"Year {year_data[i,1]}")
             year_data[i,2] = st.number_input(f"No. of Billable per annum (Year {year_data[i,j]})", value=year_data[i,2])
             year_data[i,3] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[i,j]})", value=year_data[i,3])
