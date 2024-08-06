@@ -51,7 +51,8 @@ def assumptions_screen():
 def operations_data_screen():
     st.header("Operations Data")
 
-    for i < 11:
+    i=1
+    if i<11:
        for year_data[i,j] in st.session_state["operations_data"]:
            st.subheader(f"Year {year_data[i,1]}")
            year_data[i,2] = st.number_input(f"No. of Billable per annum (Year {year_data[i,j]})", value=year_data[i,2])
