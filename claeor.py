@@ -15,7 +15,7 @@ if "assumptions" not in st.session_state:
 
 if "operations_data" not in st.session_state:
     st.session_state["operations_data"] = [
-        # Format: [Year, Rental hrs, No. of aircraft in fleet, No. of aircraft sold per year, Gross Margin %, Debt to Equity ratio, MRO services Revenue, Partnership Revenue, Operating Expenses, Investor Capital Called]
+        # Format: [Year, Rental hrs, Size of fleet, Number of aircraft sold, Gross Margin %, Debt to Equity ratio, MRO services Revenue, Partnership Revenue, Operating Expenses, Investor Capital Called]
         [1, 250, 20, 10, 50.0,  0.33,  300000, 100000, 3000000, 60000000],
         [2, 250, 20, 10, 50.0,  0.33,  400000, 500000, 3000000, 0],
         [3, 500, 20, 10, 50.0,  0.33, 1000000, 1000000, 3000000, 0],
@@ -53,8 +53,8 @@ def operations_data_screen():
     Ops_labels = [
         "Year", 
         "Target Rental hrs", 
-        "No. of aircraft in fleet", 
-        "No. of aircraft sold in year", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
         "Gross Margin %", 
         "Debt to Equity ratio", 
         "MRO services Revenue $", 
