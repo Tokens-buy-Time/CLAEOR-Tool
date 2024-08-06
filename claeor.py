@@ -66,7 +66,7 @@ def operations_data_screen():
             year_data[i,10] = st.number_input(f"Investor Capital Call (Year {year_data[i,j]})", value=year_data[i,10])
 
             if st.button(f"Save Year {year_data[i,1]} Data"):
-               st.success(f"Year {year_data[i,1]} data saved!"
+                st.success(f"Year {year_data[i,1]} data saved!")
             i=i+1
 
 # Function to display financial statements
