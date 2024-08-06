@@ -88,9 +88,9 @@ def operations_data_screen():
         st.session_state["operations_data"][n8] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n8])
         st.session_state["operations_data"][n9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n9])
 
-       if st.button(f"Save year's input data"):
-          st.success(f"Year's input data saved!")
-          i=i+10
+        if st.button(f"Save year's input data"):
+           st.success(f"Year's input data saved!")
+           i=i+10
 
 
 # st.subheader(f"{Ops_labels[0]} {i}")
