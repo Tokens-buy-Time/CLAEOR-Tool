@@ -58,7 +58,7 @@ def operations_data_screen():
            year_data[i,2] = st.number_input(f"No. of Billable per annum (Year {year_data[i,j]})", value=year_data[i,2])
            year_data[i,3] = st.number_input(f"No. of Aircraft in Fleet (Year {year_data[i,j]})", value=year_data[i,3])
            year_data[i,4] = st.number_input(f"No. of Aircraft Sold per Year (Year {year_data[i,j]})", value=year_data[i,4])
-           year_data[i,5] = st.number_input(f"Gross Margin % (Year {year_data[i,j]})", value=year_data[i,5)
+           year_data[i,5] = st.number_input(f"Gross Margin % (Year {year_data[i,j]})", value=year_data[i,5])
            year_data[i,6] = st.number_input(f"Debt to Equity Ratio (Year {year_data[i,j]})", value=year_data[i,6])
            year_data[i,7] = st.number_input(f"MRO Services Revenue (Year {year_data[i,j]})", value=year_data[i,7])
            year_data[i,8] = st.number_input(f"Partnership Revenue (Year {year_data[i,j]})", value=year_data[i,8])
