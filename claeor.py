@@ -155,10 +155,12 @@ def operations_data_screen():
         "Operating Expenses $", 
         "Investor Capital Calls $"
     ]
+    
     Screen_No = 1
+    Year_n = Screen_No
+    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    
     for i in range(0,10):
-        Year_n = st.session_state["operations_data"][i]
-        st.subheader(f"{Ops_labels[0]} {Year_n}")
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
@@ -204,7 +206,6 @@ def operations_data_screen():
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(11,20):
-       
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
