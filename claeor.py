@@ -156,12 +156,10 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
     
-    Screen_No = 1
-    Year_n = Screen_No
+    Year_n = 1
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(0,10):
-        i=i+1
+    for i in range(1,10):
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -201,8 +199,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
     
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 2
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(11,20):
@@ -245,8 +242,8 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+
+    Year_n = 3
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(21,30):
@@ -289,8 +286,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 4
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
     for i in range(31,40):
@@ -333,8 +329,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 5
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
     for i in range(41,50):
@@ -377,8 +372,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 6
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(51,60):
@@ -421,8 +415,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 7
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
     for i in range(61,70):
@@ -465,8 +458,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 8
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
     for i in range(71,80):
@@ -509,8 +501,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 9
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(81,90):
@@ -553,8 +544,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-    Screen_No = Screen_No + 1
-    Year_n = Screen_No
+    Year_n = 10
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
     for i in range(91,100):
