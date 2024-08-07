@@ -154,40 +154,40 @@ def operations_data_screen():
     ]
     
     for i in range(1,91):
-        for j in range(i,i+10):
+        for j in range(i,i+=):
             Year_n = st.session_state["operations_data"][j]
             st.subheader(f"{Ops_labels[0]} {Year_n}")
-            j+=1
+            j+=
             Target_Rental_hrs = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Size_of_fleet = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Number_of_aircraft_sold = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Gross_Margin = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Debt_to_Equity_ratio = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             MRO_services_Revenue = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Partnership_Revenue = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Operating_Expenses = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j+=1
+            j+=
             Investor_Capital_Calls = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            i=i+10
+            i+=
 
 
 # Function to display financial statements
