@@ -218,21 +218,28 @@ def home_screen():
 
 # Indtructions function
 def instructions_screen():
-    st.title("Indtructions")
+    st.title("Instructions")
     st.write("""
         To execute this App's functions, mobile users will notice an arrow (greater than equal character) at the top left hand corner of the screen when the device is being held in portrate mode.
         Click on the arrow to access a drop-down menu of available features.
         It is recommended that you adhere to the following sequence when operating the App.
         
         Start by :-
+        
         (1) - Entering and saving Assumptions data.
+        
         (2) - Following, enter and save operations data for each of the 10 years which the PE fund is to be in existence.
+        
         (3) - Review Income statements, Balance Sheets, Cash flows and associated performance indicators for each of the 10 years.
-        (4) - Review the key metrics at PE Fund exit; the end of year 10
+        
+        (4) - Review the key metrics at PE Fund exit; the end of year 10.
+        
 
         You may change various parameter values within the assumptions and operations data, in order to assess the impact of the parameter, in context of other set parameter values, so as to assess, evaluate and draw insights.
         
-        ⚠️ WARNING - this app is NOT supported. It is for demonstration purposes only and must NOT be used to make any financial decisions or take any financial actions based upon its operation.
+        ⚠️ WARNING - 
+        
+           this app is NOT supported. It is for demonstration purposes only and must NOT be used to make any financial decisions or take any financial actions based upon its operation.
 
     """)
 
