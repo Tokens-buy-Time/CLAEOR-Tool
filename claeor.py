@@ -182,7 +182,7 @@ def operations_screen_1():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=0:
+        elif i==0:
 
 
 
@@ -229,7 +229,7 @@ def operations_screen_2():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=10
+        elif i==10
 
 
 # Year 3 Screen
@@ -275,7 +275,7 @@ def operations_screen_3():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=20:
+        elif i==20:
 
 
 # Year 4 Screen
@@ -321,7 +321,7 @@ def operations_screen_4():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=30:
+        elif i==30:
 
 
 # Year 5 Screen
@@ -367,7 +367,7 @@ def operations_screen_5():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=40:
+        elif i==40:
 
 
 # Year 6 Screen
@@ -413,7 +413,7 @@ def operations_screen_6():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=50
+        elif i==50
 
 
 # Year 7 Screen
@@ -459,7 +459,7 @@ def operations_screen_7():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=60:
+        elif i==60:
 
 
 # Year 8 Screen
@@ -505,7 +505,7 @@ def operations_screen_8():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=70:
+        elif i==70:
 
 
 # Year 9 Screen
@@ -551,7 +551,7 @@ def operations_screen_9():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=90:
+        elif i==80:
 
 
 
@@ -598,7 +598,7 @@ def operations_screen_10():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i=90
+        elif i==90
 
 
 # Function to display financial statements
