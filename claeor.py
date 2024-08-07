@@ -115,7 +115,8 @@ if "operations_data" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0]
+        0
+    ]
 
 # Function to display and save assumptions
 def assumptions_screen():
