@@ -669,5 +669,4 @@ elif menu == "Financial Statements":
     financial_statements_screen()
 elif menu == "Performance Metrics":
     performance_metrics_screen()
-elif menu == ""
 
