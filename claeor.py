@@ -157,31 +157,31 @@ def operations_data_screen():
         for j in range(i,i+10):
             Year_n = st.session_state["operations_data"][j]
             st.subheader(f"{Ops_labels[0]} {Year_n}")
-            j=j+1
+            j+=1
             Target_Rental_hrs = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Size_of_fleet = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Number_of_aircraft_sold = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Gross_Margin = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Debt_to_Equity_ratio = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             MRO_services_Revenue = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Partnership_Revenue = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Operating_Expenses = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j=j+1
+            j+=1
             Investor_Capital_Calls = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
         
