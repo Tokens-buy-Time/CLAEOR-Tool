@@ -64,35 +64,35 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
     
-    i=1
-    for i in range(91):
+    r=1
+    for r in range(91):
         
-        n1=int(i+1)
-        n2=int(i+2)
-        n3=int(i+3)
-        n4=int(i+4)
-        n5=int(i+5)
-        n6=int(i+6)
-        n7=int(i+7)
-        n8=int(i+8)
-        n9=int(i+9)
-        Year_nd = math.ceil(i/10)
+        c1=int(r+1)
+        c2=int(r+2)
+        c3=int(r+3)
+        c4=int(r+4)
+        c5=int(r+5)
+        c6=int(r+6)
+        c7=int(r+7)
+        c8=int(r+8)
+        c9=int(r+9)
+        Year_nd = math.ceil(r/10)
         Year_n = int(Year_nd)
         
 # st.subheader(f"{Ops_labels[0]} {Year_n}")
-# st.session_state["operations_data"][n1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n1])
-# st.session_state["operations_data"][n2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n2])
-# st.session_state["operations_data"][n3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n3])
-# st.session_state["operations_data"][n4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n4])
-# st.session_state["operations_data"][n5] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n5])
-# st.session_state["operations_data"][n6] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n6])
-# st.session_state["operations_data"][n7] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n7])
-# st.session_state["operations_data"][n8] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n8])
-# st.session_state["operations_data"][n9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][n9])
+# st.session_state["operations_data"][c1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c1])
+# st.session_state["operations_data"][c2] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c2])
+# st.session_state["operations_data"][c3] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c3])
+# st.session_state["operations_data"][c4] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c4])
+# st.session_state["operations_data"][c5] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c5])
+# st.session_state["operations_data"][c6] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c6])
+# st.session_state["operations_data"][c7] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c7])
+# st.session_state["operations_data"][c8] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c8])
+# st.session_state["operations_data"][c9] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c9])
 
         if st.button(f"Save year's input data"):
            st.success(f"Year's input data saved!")
-           i=i+10
+           r=r+10
 
 
 # Function to display financial statements
