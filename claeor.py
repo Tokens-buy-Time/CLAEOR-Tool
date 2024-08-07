@@ -159,31 +159,31 @@ def operations_data_screen():
             st.subheader(f"{Ops_labels[0]} {Year_n}")
             j=j+1
             Target_Rental_hrs = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Target_Rental_hrs)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Target_Rental_hrs, placeholder=Target_Rental_hrs)
             j=j+1
             Size_of_fleet = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Size_of_fleet)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Size_of_fleet, placeholder=Size_of_fleet)
             j=j+1
             Number_of_aircraft_sold = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Number_of_aircraft_sold)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Number_of_aircraft_sold, placeholder=Number_of_aircraft_sold)
             j=j+1
             Gross_Margin = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Gross_Margin)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Gross_Margin, placeholder=Gross_Margin)
             j=j+1
             Debt_to_Equity_ratio = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Debt_to_Equity_ratio)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Debt_to_Equity_ratio, placeholder=Debt_to_Equity_ratio)
             j=j+1
             MRO_services_Revenue = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=MRO_services_Revenue)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=MRO_services_Revenue, placeholder=MRO_services_Revenue)
             j=j+1
             Partnership_Revenue = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Partnership_Revenue)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Partnership_Revenue, placeholder=Partnership_Revenue)
             j=j+1
             Operating_Expenses = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Operating_Expenses)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Operating_Expenses, placeholder=Operating_Expenses)
             j=j+1
             Investor_Capital_Calls = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, placeholder=Investor_Capital_Calls)
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Investor_Capital_Calls, placeholder=Investor_Capital_Calls)
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
