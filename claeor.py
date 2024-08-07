@@ -159,7 +159,8 @@ def operations_data_screen():
     Year_n = 1
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(1,10):
+    for i in range(0,9):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -202,7 +203,8 @@ def operations_data_screen():
     Year_n = 2
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
-    for i in range(11,20):
+    for i in range(10,19):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -246,7 +248,8 @@ def operations_data_screen():
     Year_n = 3
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
-    for i in range(21,30):
+    for i in range(20,29):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -289,7 +292,8 @@ def operations_data_screen():
     Year_n = 4
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(31,40):
+    for i in range(30,39):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -332,7 +336,8 @@ def operations_data_screen():
     Year_n = 5
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(41,50):
+    for i in range(40,49):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -375,7 +380,8 @@ def operations_data_screen():
     Year_n = 6
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
-    for i in range(51,60):
+    for i in range(50,59):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -418,7 +424,8 @@ def operations_data_screen():
     Year_n = 7
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(61,70):
+    for i in range(60,69):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -461,7 +468,8 @@ def operations_data_screen():
     Year_n = 8
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(71,80):
+    for i in range(70,79):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -504,7 +512,8 @@ def operations_data_screen():
     Year_n = 9
     st.subheader(f"{Ops_labels[0]} {Year_n}")
 
-    for i in range(81,90):
+    for i in range(80,89):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
@@ -547,7 +556,8 @@ def operations_data_screen():
     Year_n = 10
     st.subheader(f"{Ops_labels[0]} {Year_n}")
     
-    for i in range(91,100):
+    for i in range(90,99):
+        i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
