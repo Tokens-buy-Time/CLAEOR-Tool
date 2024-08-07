@@ -138,6 +138,8 @@ def assumptions_screen():
     if st.button("Save Assumptions"):
         st.success("Assumptions saved!")
 
+
+# Year 1 Screen 
 # Function to display and save operations data
 def operations_data_screen():
     st.header("Operations Data")
@@ -153,9 +155,7 @@ def operations_data_screen():
         "Operating Expenses $", 
         "Investor Capital Calls $"
     ]
-
-# Year 1 Screen 
-    for i in range(0,9):
+    for i, Ops_label in range(0,9):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
         i=i+1
@@ -180,7 +180,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 2 Screen 
+# Year 2 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(11,20):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -206,7 +221,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 3 Screen 
+# Year 3 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(21,30):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -232,7 +262,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 4 Screen 
+# Year 4 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(31,40):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -258,7 +303,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 5 Screen 
+# Year 5 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(41,50):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -284,7 +344,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 6 Screen 
+# Year 6 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(51,60):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -310,7 +385,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 7 Screen 
+# Year 7 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(61,70):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -336,7 +426,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 8 Screen 
+# Year 8 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(71,80):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -362,7 +467,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 9 Screen 
+# Year 9 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(81,90):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
@@ -388,7 +508,22 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
-# Year 10 Screen 
+# Year 10 Screen
+# Function to display and save operations data
+def operations_data_screen():
+    st.header("Operations Data")
+    Ops_labels = [
+        "Year", 
+        "Target Rental hrs", 
+        "Size of fleet", 
+        "Number of aircraft sold", 
+        "Gross Margin %", 
+        "Debt to Equity ratio", 
+        "MRO services Revenue $", 
+        "Partnership Revenue $", 
+        "Operating Expenses $", 
+        "Investor Capital Calls $"
+    ]
     for i in range(91,100):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
