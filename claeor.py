@@ -157,7 +157,7 @@ def operations_screen_1():
     ]
     
     Year_n = 1
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
 
     for i in range(0,9):
         i=i+1
@@ -202,7 +202,7 @@ def operations_screen_2():
     ]
     
     Year_n = 2
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}"}")
 
     for i in range(10,19):
         i=i+1
@@ -246,7 +246,7 @@ def operations_screen_3():
     ]
 
     Year_n = 3
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
 
     for i in range(20,29):
         i=i+1
@@ -290,7 +290,7 @@ def operations_screen_4():
     ]
 
     Year_n = 4
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
     
     for i in range(30,39):
         i=i+1
@@ -334,7 +334,7 @@ def operations_screen_5():
     ]
 
     Year_n = 5
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
     
     for i in range(40,49):
         i=i+1
@@ -378,7 +378,7 @@ def operations_screen_6():
     ]
 
     Year_n = 6
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
 
     for i in range(50,59):
         i=i+1
@@ -422,7 +422,7 @@ def operations_screen_7():
     ]
 
     Year_n = 7
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
     
     for i in range(60,69):
         i=i+1
@@ -466,7 +466,7 @@ def operations_screen_8():
     ]
 
     Year_n = 8
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
     
     for i in range(70,79):
         i=i+1
@@ -510,7 +510,7 @@ def operations_screen_9():
     ]
 
     Year_n = 9
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f"Year {Year_n}")
 
     for i in range(80,89):
         i=i+1
@@ -555,7 +555,7 @@ def operations_screen_10():
     ]
 
     Year_n = 10
-    st.subheader(f"{Ops_labels[0]} {Year_n}")
+    st.subheader(f2"Year {Year_n}")
     
     for i in range(90,99):
         i=i+1
