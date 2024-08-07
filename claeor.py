@@ -155,7 +155,7 @@ def operations_data_screen():
         "Operating Expenses $", 
         "Investor Capital Calls $"
     ]
-    for i, range(0,10):
+    for i in range(0,10):
         Year_n = st.session_state["operations_data"][i]
         st.subheader(f"{Ops_labels[0]} {Year_n}")
         i=i+1
