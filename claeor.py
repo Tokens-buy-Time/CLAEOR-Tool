@@ -2,7 +2,7 @@
 import streamlit as st
 import math
 
-# Initialize session state variables for assumptions and operations data if they don't exist
+# Initialize session state variables for assumptions if they don't exist
 if "assumptions" not in st.session_state:
     st.session_state["assumptions"] = [
         169.50,  # Hourly Rental Rate
@@ -14,6 +14,7 @@ if "assumptions" not in st.session_state:
         386000.00 # Acquisition cost per aircraft
     ]
 
+# Initialize session state variables for operations data if they don't exist
 if "operations_data" not in st.session_state:
     st.session_state["operations_data"] = [
         1, 
