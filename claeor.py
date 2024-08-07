@@ -178,11 +178,10 @@ def operations_screen_1():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=10
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==0:
+        elif operations_screen_1():
 
 
 
@@ -225,11 +224,10 @@ def operations_screen_2():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=20
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==10
+        elif operations_screen_2():
 
 
 # Year 3 Screen
@@ -271,11 +269,10 @@ def operations_screen_3():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=30
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==20:
+        elif operations_screen_3():
 
 
 # Year 4 Screen
@@ -317,11 +314,10 @@ def operations_screen_4():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=40
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==30:
+        elif operations_screen_4():
 
 
 # Year 5 Screen
@@ -363,11 +359,10 @@ def operations_screen_5():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=50
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==40:
+        elif operations_screen_5():
 
 
 # Year 6 Screen
@@ -409,11 +404,10 @@ def operations_screen_6():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=60
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==50
+        elif operations_screen_6():
 
 
 # Year 7 Screen
@@ -455,11 +449,10 @@ def operations_screen_7():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=70
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==60:
+        elif operations_screen_7():
 
 
 # Year 8 Screen
@@ -501,11 +494,10 @@ def operations_screen_8():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=80
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==70:
+        elif operations_screen_8():
 
 
 # Year 9 Screen
@@ -547,11 +539,10 @@ def operations_screen_9():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=90
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==80:
+        elif operations_screen_9():
 
 
 
@@ -594,11 +585,10 @@ def operations_screen_10():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
-        i=100
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-        elif i==90
+        elif operations_screen_10():
 
 
 # Function to display financial statements
