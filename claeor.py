@@ -133,10 +133,10 @@ def assumptions_screen():
     ]
     
     for i, label in enumerate(assumption_labels):
-       st.session_state["assumptions"][i] = st.number_input(label, value=st.session_state["assumptions"][i])
-        
-        if st.button("Save Assumptions"):
-            st.success("Assumptions saved!")
+        st.session_state["assumptions"][i] = st.number_input(label, value=st.session_state["assumptions"][i])
+    
+    if st.button("Save Assumptions"):
+        st.success("Assumptions saved!")
 
 
 # Year 1 Screen 
