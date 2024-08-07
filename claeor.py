@@ -64,7 +64,7 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
     
-    for r in range(91):
+    for r in range(1,91):
         
         c1=r+1
         c2=r+2
