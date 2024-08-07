@@ -555,7 +555,7 @@ def operations_screen_10():
     ]
 
     Year_n = 10
-    st.subheader(f2"Year {Year_n}")
+    st.subheader(f"Year {Year_n}")
     
     for i in range(90,99):
         i=i+1
