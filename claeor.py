@@ -237,7 +237,7 @@ def instructions_screen():
     """)
 
 # Sidebar navigation
-menu = st.sidebar.selectbox("Navigation", ["Home", "Assumptions", "Operations Data", "Financial Statements", "Performance Metrics"])
+menu = st.sidebar.selectbox("Navigation", ["Home", "Instructions",  "Assumptions", "Operations Data", "Financial Statements", "Performance Metrics"])
 
 if menu == "Home":
     home_screen()
