@@ -14,8 +14,8 @@ if "assumptions" not in st.session_state:
         386000.00 # Acquisition cost per aircraft
     ]
 
-if "operations_data" not in st.session_state:
-    st.session_state["operations_data"] = [
+if "operations-data" not in st.session_state:
+    st.session_state["operations-data"] = [
         1, 
         250, 
         20, 
@@ -155,7 +155,7 @@ def operations_data_screen():
     
     for i in range(0,90):
         for j in range(i,i+10):
-            Year_n = st.session_state["operations_data"][j]
+            Year_n = st.session_state["operations-data"][j]
             st.subheader(f"{Ops_labels[0]} {Year_n}")
             j=j+1
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations-data"][i])
