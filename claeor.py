@@ -159,7 +159,7 @@ def operations_data_screen():
             st.subheader(f"{Ops_labels[0]} {Year_n}")
             j=j+1
             Target_Rental_hrs = st.session_state["operations_data"][j]
-            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value={Target_hours})
+            st.session_state["operations_data"][j] = st.number_input(Ops_labels, value={Target_Rental_hrs})
             j=j+1
             Size_of_fleet = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=Size_of_fleet)
