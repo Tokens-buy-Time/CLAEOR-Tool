@@ -141,7 +141,7 @@ def assumptions_screen():
 
 # Year 1 Screen 
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_1():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -187,7 +187,7 @@ def operations_data_screen():
 
 # Year 2 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_2():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -233,7 +233,7 @@ def operations_data_screen():
 
 # Year 3 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_3():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -279,7 +279,7 @@ def operations_data_screen():
 
 # Year 4 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_4():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -325,7 +325,7 @@ def operations_data_screen():
 
 # Year 5 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_5():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -371,7 +371,7 @@ def operations_data_screen():
 
 # Year 6 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_6():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -417,7 +417,7 @@ def operations_data_screen():
 
 # Year 7 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_7():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -463,7 +463,7 @@ def operations_data_screen():
 
 # Year 8 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_8():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -509,7 +509,7 @@ def operations_data_screen():
 
 # Year 9 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_9():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -555,7 +555,7 @@ def operations_data_screen():
 
 # Year 10 Screen
 # Function to display and save operations data
-def operations_data_screen():
+def operations_data_screen_10():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
