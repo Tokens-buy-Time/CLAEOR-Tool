@@ -202,7 +202,7 @@ def operations_screen_2():
     ]
     
     Year_n = 2
-    st.subheader(f"Year {Year_n}"}")
+    st.subheader(f"Year {Year_n}")
 
     for i in range(10,19):
         i=i+1
