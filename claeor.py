@@ -188,7 +188,7 @@ def operations_screen_1(rerun_1):
 
 # Year 2 Screen
 # Function to display and save operations data
-def operations_screen_2():
+def operations_screen_2(rerun_2):
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -228,13 +228,13 @@ def operations_screen_2():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun=0
-        elif rerun=1:
+            rerun_2 = 0
+        elif rerun_2 = 1
 
 
 # Year 3 Screen
 # Function to display and save operations data
-def operations_screen_3():
+def operations_screen_3(rerun_3):
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -274,11 +274,8 @@ def operations_screen_3():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun=0
-        elif rerun=1:
-    
-    if rerun=0
-    operations_screen_3():
+            rerun_3=0
+        elif rerun_3=1
 
 
 # Year 4 Screen
