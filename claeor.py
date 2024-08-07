@@ -647,23 +647,23 @@ elif menu == "Instructions":
     instructions_screen()
 elif menu == "Assumptions":
     assumptions_screen()
-elif menu == "Year 1 Operations Data":
+elif menu == "Year 1 Operations":
     operations_screen_1()
-elif menu == "Year 2 Operations Data":
+elif menu == "Year 2 Operations":
     operations_screen_2()
-elif menu == "Year 3 Operations Data":
+elif menu == "Year 3 Operations":
     operations_screen_3()
-elif menu == "Year 4 Operations Data":
+elif menu == "Year 4 Operations":
     operations_screen_4()
-elif menu == "Year 6 Operations Data":
+elif menu == "Year 6 Operations":
     operations_screen_6()
-elif menu == "Year 7 Operations Data":
+elif menu == "Year 7 Operations":
     operations_screen_7()
-elif menu == "Year 8 Operations Data":
+elif menu == "Year 8 Operations":
     operations_screen_8()
-elif menu == "Year 9 Operations Data":
+elif menu == "Year 9 Operations":
     operations_screen_9()
-elif menu == "Year 10 Operations Data":
+elif menu == "Year 10 Operations":
     operations_screen_10()
 elif menu == "Financial Statements":
     financial_statements_screen()
