@@ -682,7 +682,7 @@ elif menu == "Year 1 Operations":
     operations_screen_1(rerun_1)
     if rerun_1=1
        rerun_1=0
-       operation_screen_1(rerun_1)
+#   operation_screen_1(rerun_1)
     elif
        home_screen()
 elif menu == "Year 2 Operations":
@@ -690,7 +690,7 @@ elif menu == "Year 2 Operations":
     operations_screen_2(rerun_2)
     if rerun_2=1
        rerun_2=0
-       operation_screen_2(rerun_2)
+#  operation_screen_2(rerun_2)
     elif
        home_screen()
 elif menu == "Year 3 Operations":
@@ -698,7 +698,7 @@ elif menu == "Year 3 Operations":
     operations_screen_3(rerun_3)
     if rerun_3=1
        rerun_3=0
-       operation_screen_3(rerun_3)
+#  operation_screen_3(rerun_3)
     elif
        home_screen()
 elif menu == "Year 4 Operations":
@@ -706,7 +706,7 @@ elif menu == "Year 4 Operations":
     operations_screen_4(rerun_4)
     if rerun_4=1
        rerun_4=0
-       operation_screen_4(rerun_4)
+#  operation_screen_4(rerun_4)
     elif
        home_screen()
 elif menu == "Year 5 Operations":
@@ -714,7 +714,7 @@ elif menu == "Year 5 Operations":
     operations_screen_5(rerun_5)
     if rerun_5=1
        rerun_5=0
-       operation_screen_5(rerun_5)
+# operation_screen_5(rerun_5)
     elif
        home_screen()
 elif menu == "Year 6 Operations":
@@ -722,7 +722,7 @@ elif menu == "Year 6 Operations":
     operations_screen_6(rerun_6)
     if rerun_6=1
        rerun_6=0
-       operation_screen_6(rerun_6)
+# operation_screen_6(rerun_6)
     elif
        home_screen()
 elif menu == "Year 7 Operations":
@@ -730,7 +730,7 @@ elif menu == "Year 7 Operations":
     operations_screen_7(rerun_7)
     if rerun_7=1
        rerun_7=0
-       operation_screen_7(rerun_7)
+# operation_screen_7(rerun_7)
     elif
        home_screen()
 elif menu == "Year 8 Operations":
@@ -738,7 +738,7 @@ elif menu == "Year 8 Operations":
     operations_screen_8(rerun_8)
     if rerun_8=1
        rerun_8=0
-       operation_screen_8(rerun_8)
+# operation_screen_8(rerun_8)
     elif
        home_screen()
 elif menu == "Year 9 Operations":
@@ -746,7 +746,7 @@ elif menu == "Year 9 Operations":
     operations_screen_9(rerun_9)
     if rerun_9=1
        rerun_9=0
-       operation_screen_9(rerun_9)
+# operation_screen_9(rerun_9)
     elif
        home_screen()
 elif menu == "Year 10 Operations":
@@ -754,7 +754,7 @@ elif menu == "Year 10 Operations":
     operations_screen_10(rerun_10)
     if rerun_10=1
        rerun_10=0
-       operation_screen_10(rerun_10)
+# operation_screen_10(rerun_10)
     elif
        home_screen()
 elif menu == "Financial Statements":
