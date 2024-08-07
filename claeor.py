@@ -160,7 +160,7 @@ def operations_data_screen():
             j=j+1
             Target_Rental_hrs = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
-            j"j+1
+            j=j+1
             Size_of_fleet = st.session_state["operations_data"][j]
             st.session_state["operations_data"][j] = st.number_input(Ops_labels, value=st.session_state["operations_data"][j])
             j=j+1
