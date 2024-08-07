@@ -180,6 +180,7 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+
 # Year 2 Screen
 # Function to display and save operations data
 def operations_data_screen():
@@ -217,8 +218,10 @@ def operations_data_screen():
         st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
         i=i+1
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
+        
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
+
 
 # Year 3 Screen
 # Function to display and save operations data
@@ -262,6 +265,7 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+
 # Year 4 Screen
 # Function to display and save operations data
 def operations_data_screen():
@@ -303,6 +307,7 @@ def operations_data_screen():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
+
 
 # Year 5 Screen
 # Function to display and save operations data
@@ -346,6 +351,7 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+
 # Year 6 Screen
 # Function to display and save operations data
 def operations_data_screen():
@@ -387,6 +393,7 @@ def operations_data_screen():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
+
 
 # Year 7 Screen
 # Function to display and save operations data
@@ -430,6 +437,7 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+
 # Year 8 Screen
 # Function to display and save operations data
 def operations_data_screen():
@@ -472,6 +480,7 @@ def operations_data_screen():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+
 # Year 9 Screen
 # Function to display and save operations data
 def operations_data_screen():
@@ -513,6 +522,7 @@ def operations_data_screen():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
+
 
 # Year 10 Screen
 # Function to display and save operations data
