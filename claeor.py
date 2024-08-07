@@ -67,17 +67,17 @@ def operations_data_screen():
     r=1
     for r in range(91):
         
-        c1=int(r+1)
-        c2=int(r+2)
-        c3=int(r+3)
-        c4=int(r+4)
-        c5=int(r+5)
-        c6=int(r+6)
-        c7=int(r+7)
-        c8=int(r+8)
-        c9=int(r+9)
+        c1=math.int(r+1)
+        c2=math.int(r+2)
+        c3=math.int(r+3)
+        c4=math.int(r+4)
+        c5=math.int(r+5)
+        c6=math.int(r+6)
+        c7=math.int(r+7)
+        c8=math.int(r+8)
+        c9=math.int(r+9)
         Year_nd = math.ceil(r/10)
-        Year_n = int(Year_nd)
+        Year_n = math.int(Year_nd)
         
         st.subheader(f"{Ops_labels[0]} {Year_n}")
         st.session_state["operations_data"][c1] = st.number_input(Ops_labels, value=st.session_state["operations_data"][c1])
