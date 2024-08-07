@@ -245,9 +245,9 @@ def operations_data_screen():
         "Investor Capital Calls $"
     ]
 
-        Screen_No = Screen_No + 1
-        Year_n = Screen_No
-        st.subheader(f"{Ops_labels[0]} {Year_n}")
+    Screen_No = Screen_No + 1
+    Year_n = Screen_No
+    st.subheader(f"{Ops_labels[0]} {Year_n}")
 
     for i in range(21,30):
         st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
