@@ -239,7 +239,9 @@ def instructions_screen():
         
         ⚠️ WARNING - 
         
-           this app is NOT supported. It is for demonstration purposes only and must NOT be used to make any financial decisions or take any financial actions based upon its operation.
+           this app is NOT supported. It is for demonstration purposes only and must NOT be used to make any financial decisions or take any financial actions, based upon insights extracted as a direct or indirect result of its operation.
+
+           Neither the author of this App nor the platform upon which it is being presented, accept any liability whatsoever related to execution of this App. It is the user's sole responsibility to exercise 'due diligence' and great prudence when it comes to matters of finance.
 
     """)
 
