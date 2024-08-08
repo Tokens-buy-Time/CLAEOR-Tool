@@ -186,7 +186,7 @@ def assumptions_screen():
 
 # Year 1 Screen 
 # Function to display and save operations data
-def operations_screen_1(rerun_1):
+def operations_screen_1():
     st.header("Operations Data")
     Ops_labels = [
         "Year", 
@@ -743,7 +743,7 @@ elif menu == "Assumptions":
     assumptions_screen()
 elif menu == "Operations - Year 1":
      rerun_1=0
-     operations_screen_1(rerun_1)
+     operations_screen_1()
 #    if rerun_1=1
 #      rerun_1=0 # reset flag
 #      operations_screen_1(rerun_1)
