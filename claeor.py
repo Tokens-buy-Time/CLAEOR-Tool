@@ -676,7 +676,7 @@ def operations_screen_10():
 # Function to display financial statements
 def financial_statements_screen():
     
-    st.write("Each year's Income, Balance and Cash Flow Statement use the last saved data for the particular year")
+    st.write("Each year's Income, Balance and Cash Flow Statement use the last saved data for the particular year"):
     Income_Year():
     Balance_Sheet_Year():
     Cash_Flow_Year():
@@ -718,7 +718,7 @@ def home_screen():
         data. Use the sidebar to navigate through different sections of the tool.
     """)
 
-# Indtructions function
+# Instructions function
 def instructions_screen():
     st.title("Instructions")
     st.write("""
