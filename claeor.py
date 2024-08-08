@@ -230,8 +230,8 @@ def operations_screen_1():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            
-
+            home_screen()
+         
 
 # Year 2 Screen
 # Function to display and save operations data
