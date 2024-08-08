@@ -204,7 +204,7 @@ def operations_screen_1():
     Year_n = 1
     st.subheader(f"Year {Year_n}")
 
-    for i, label in enumerate(Ops_labels):
+    for i, label_1 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_1"][i])
         i=i+1
@@ -250,7 +250,7 @@ def operations_screen_2():
     Year_n = 2
     st.subheader(f"Year {Year_n}")
 
-    for i, label in enumerate(Ops_labels):
+    for i, label_2 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_2"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_2"][i])
         i=i+1
@@ -296,7 +296,7 @@ def operations_screen_3():
     Year_n = 3
     st.subheader(f"Year {Year_n}")
 
-    for i, label in enumerate(Ops_labels):
+    for i, label_3 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_3"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_3"][i])
         i=i+1
@@ -342,7 +342,7 @@ def operations_screen_4():
     Year_n = 4
     st.subheader(f"Year {Year_n}")
     
-    for i, label in enumerate(Ops_labels):
+    for i, label_4 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_4"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_4"][i])
         i=i+1
@@ -388,7 +388,7 @@ def operations_screen_5():
     Year_n = 5
     st.subheader(f"Year {Year_n}")
     
-    for i, label in enumerate(Ops_labels):
+    for i, label_5 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_5"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_5"][i])
         i=i+1
@@ -434,7 +434,7 @@ def operations_screen_6():
     Year_n = 6
     st.subheader(f"Year {Year_n}")
 
-    for i, label in enumerate(Ops_labels):
+    for i, label_6 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_6"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_6"][i])
         i=i+1
@@ -480,7 +480,7 @@ def operations_screen_7():
     Year_n = 7
     st.subheader(f"Year {Year_n}")
     
-    for i, label in enumerate(Ops_labels):
+    for i, label_7 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_7"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_7"][i])
         i=i+1
@@ -527,7 +527,7 @@ def operations_screen_8():
     Year_n = 8
     st.subheader(f"Year {Year_n}")
     
-    for i, label in enumerate(Ops_labels):
+    for i, label_8 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_8"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_8"][i])
         i=i+1
@@ -573,7 +573,7 @@ def operations_screen_9():
     Year_n = 9
     st.subheader(f"Year {Year_n}")
 
-    for i, label in enumerate(Ops_labels):
+    for i, label_9 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_9"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_9"][i])
         i=i+1
@@ -619,7 +619,7 @@ def operations_screen_10():
     Year_n = 10
     st.subheader(f"Year {Year_n}")
     
-    for i, label in enumerate(Ops_labels):
+    for i, label_10 in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_10"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_10"][i])
         i=i+1
