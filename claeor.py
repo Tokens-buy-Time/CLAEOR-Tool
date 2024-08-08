@@ -181,9 +181,9 @@ def operations_screen_1(rerun_1):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_1=0
-        elif 
-        rerun_1=1
+# rerun_1=0
+# elif 
+# rerun_1=1
 
 
 
@@ -228,10 +228,10 @@ def operations_screen_2(rerun_2):
         st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
         
         if st.button(f"Save year's input data"):
-            st.success(f"Year's input data saved!")
-            rerun_2=0
-        elif 
-        rerun_2=1
+            st.success(f"Year's input data saved!")# rerun_1=0
+# rerun_2=0
+# elif 
+# rerun_2=1
 
 
 # Year 3 Screen
@@ -276,10 +276,10 @@ def operations_screen_3(rerun_3):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_3=0
-        elif 
-        rerun_3=1
-
+# rerun_3=0
+# elif 
+# rerun_3=1
+j
 
 # Year 4 Screen
 # Function to display and save operations data
@@ -323,9 +323,9 @@ def operations_screen_4(rerun_4):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_4=0
-        elif 
-        rerun_4=1
+# rerun_4=0
+# elif 
+# rerun_4=1
 
 
 # Year 5 Screen
@@ -370,9 +370,9 @@ def operations_screen_5(rerun_5):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_5=0
-        elif 
-        rerun_5=1
+# rerun_5=0
+# elif 
+# rerun_5=1
 
 
 # Year 6 Screen
@@ -417,9 +417,9 @@ def operations_screen_6(rerun_6):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_6=0
-        elif 
-        rerun_6=1
+# rerun_6=0
+# elif 
+# rerun_6=1
 
 
 # Year 7 Screen
@@ -464,9 +464,9 @@ def operations_screen_7(rerun_7):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_7=0
-        elif 
-        rerun_7=1
+# rerun_7=0
+# elif 
+# rerun_7=1
 
 
 # Year 8 Screen
@@ -511,9 +511,9 @@ def operations_screen_8(rerun_8):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_8=0
-        elif 
-        rerun_8=1
+# rerun_8=0
+# elif 
+# rerun_8=1
 
 
 # Year 9 Screen
@@ -558,9 +558,9 @@ def operations_screen_9(rerun_9):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_9=0
-        elif 
-        rerun_9=1
+# rerun_9=0
+# elif 
+# rerun_9=1
 
 
 
@@ -606,9 +606,9 @@ def operations_screen_10(rerun_10):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            rerun_10=0
-        elif 
-        rerun_10=1
+# rerun_10=0
+# elif 
+# rerun_10=1
 
 
 # Function to display financial statements
