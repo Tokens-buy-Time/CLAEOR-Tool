@@ -230,7 +230,10 @@ def operations_screen_1():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-         
+
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 # Year 2 Screen
 # Function to display and save operations data
@@ -278,7 +281,10 @@ def operations_screen_2():
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-            
+
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 3 Screen
@@ -328,6 +334,9 @@ def operations_screen_3():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 4 Screen
@@ -377,6 +386,9 @@ def operations_screen_4():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 5 Screen
@@ -426,6 +438,9 @@ def operations_screen_5():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 6 Screen
@@ -475,6 +490,9 @@ def operations_screen_6():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 7 Screen
@@ -524,6 +542,9 @@ def operations_screen_7():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 8 Screen
@@ -573,6 +594,9 @@ def operations_screen_8():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 9 Screen
@@ -622,6 +646,9 @@ def operations_screen_9():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
 
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Year 10 Screen
@@ -671,6 +698,9 @@ def operations_screen_10():
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
             
+        st.write(" ")
+        st.write(" ")
+        st.write(" ")
 
 
 # Function to display financial statements
