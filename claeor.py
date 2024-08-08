@@ -186,7 +186,6 @@ def operations_screen_1(rerun_1):
 #           rerun_1=1
 
 
-
 # Year 2 Screen
 # Function to display and save operations data
 def operations_screen_2(rerun_2):
