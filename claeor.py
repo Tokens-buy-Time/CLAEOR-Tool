@@ -732,74 +732,74 @@ elif menu == "Instructions":
 elif menu == "Assumptions":
     assumptions_screen()
 elif menu == "Operations; Year 1":
-     rerun_1=0
+     rerun_1==0
      operations_screen_1(rerun_1)
 #    if rerun_1==1
-#      rerun_1=0
-#      operation_screen_1(rerun_1)
+#      rerun_1==0 # reset flag
+#      operations_screen_1(rerun_1)
 #    elif
 elif menu == "Operations; Year 2":
-     rerun_2=0
+     rerun_2==0
      operations_screen_2(rerun_2)
 #    if rerun_2==1
-#      rerun_2=0
-#      operation_screen_2(rerun_2)
+#      rerun_2==0 # reset flag
+#      operations_screen_2(rerun_2)
 #    elif
 elif menu == "Operations; Year 3":
-     rerun_3=0
+     rerun_3==0
      operations_screen_3(rerun_3)
 #    if rerun_3==1
-#      rerun_3=0
-#      operation_screen_3(rerun_3)
+#      rerun_3==0 # reset flag
+#      operations_screen_3(rerun_3)
 #    elif
 elif menu == "Operations; Year 4":
-     rerun_4=0
+     rerun_4==0
      operations_screen_4(rerun_4)
 #    if rerun_4==1
-#      rerun_4=0
-#      operation_screen_4(rerun_4)
+#      rerun_4==0 # reset flah
+#      operations_screen_4(rerun_4)
 #    elif
 elif menu == "Operations; Year 5":
-     rerun_5=0
+     rerun_5==0
      operations_screen_5(rerun_5)
 #    if rerun_5==1
-#      rerun_5=0
-#      operation_screen_5(rerun_5)
+#      rerun_5==0 # reset flag
+#      operations_screen_5(rerun_5)
 #    elif
 elif menu == "Operations; Year 6":
-     rerun_6=0
+     rerun_6==0
      operations_screen_6(rerun_6)
 #    if rerun_6==1
-#      rerun_6=0
-#      operation_screen_6(rerun_6)
+#      rerun_6==0 # reset flag
+#      operations_screen_6(rerun_6)
 #    elif
 elif menu == "Operations; Year 7":
-     rerun_7=0
+     rerun_7==0
      operations_screen_7(rerun_7)
 #    if rerun_7==1
-#      rerun_7=0
-#      operation_screen_7(rerun_7)
+#      rerun_7==0 # reset flag
+#      operations_screen_7(rerun_7)
 #    elif
 elif menu == "Operations; Year 8":
-     rerun_8=0
+     rerun_8==0
      operations_screen_8(rerun_8)
 #    if rerun_8==1
-#      rerun_8=0
-#      operation_screen_8(rerun_8)
+#      rerun_8==0 # reset flag
+#      operations_screen_8(rerun_8)
 #    elif
 elif menu == "Operations; Year 9":
-     rerun_9=0
+     rerun_9==0
      operations_screen_9(rerun_9)
 #    if rerun_9==1
-#      rerun_9=0
-#      operation_screen_9(rerun_9)
+#      rerun_9==0 # reset flag
+#      operations_screen_9(rerun_9)
 #    elif
 elif menu == "Operations; Year 10":
-     rerun_10=0
+     rerun_10==0
      operations_screen_10(rerun_10)
 #    if rerun_10==1
-#      rerun_10=0
-#      operation_screen_10(rerun_10)
+#      rerun_10==0 # reset flag
+#      operations_screen_10(rerun_10)
 #    elif
 elif menu == "Financial Statements":
     financial_statements_screen()
