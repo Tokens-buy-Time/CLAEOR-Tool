@@ -17,16 +17,16 @@ if "assumptions" not in st.session_state:
 # Initialize session state variables for operations data if they don't exist
 if "operations_data_1" not in st.session_state:
     st.session_state["operations_data_1"] = [
-        1, 
-        250, 
-        20, 
-        10, 
-        50.0,  
-        0.33,  
-        300000, 
-        100000, 
-        3000000, 
-        60000000,
+        1, # Year
+        250, # Billable hourd
+        20, # Number of fleet aircraft
+        10, # Number of aircraft sold
+        50.0, # Gross Margin percentage
+        0.33,  # Debt-Equity ratio
+        300000, # MRO & FBO Revenue
+        100000, # Partnership Revenue
+        3000000, # Expenses
+        60000000, # Capital Calls
     ]
     
 # Initialize session state variables for operations data if they don't exist
