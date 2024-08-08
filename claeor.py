@@ -134,8 +134,8 @@ if "operations_data_8" not in st.session_state:
     ]
 
 # Initialize session state variables for operations data if they don't exist
-if "operations_data_1" not in st.session_state:
-    st.session_state["operations_data_1"] = [
+if "operations_data_9" not in st.session_state:
+    st.session_state["operations_data_9"] = [
         9, 
         500, 
         20, 
