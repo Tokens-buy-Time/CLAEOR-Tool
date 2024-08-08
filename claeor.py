@@ -26,7 +26,7 @@ if "operations_data_1" not in st.session_state:
         300000, # MRO & FBO Revenue
         100000, # Partnership Revenue
         3000000, # Expenses
-        60000000, # Capital Calls
+        60000000 # Capital Calls
     ]
     
 # Initialize session state variables for operations data if they don't exist
@@ -41,7 +41,7 @@ if "operations_data_2" not in st.session_state:
         400000, 
         500000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -56,7 +56,7 @@ if "operations_data_3" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -71,7 +71,7 @@ if "operations_data_4" not in st.session_state:
         1000000, 
         1000000, 
         3000000,
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -86,7 +86,7 @@ if "operations_data_5" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -101,7 +101,7 @@ if "operations_data_6" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -116,7 +116,7 @@ if "operations_data_7" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -131,7 +131,7 @@ if "operations_data_8" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
@@ -146,7 +146,7 @@ if "operations_data_9" not in st.session_state:
         1000000, 
         1000000, 
         3000000, 
-        0,
+        0
     ]
 
 # Initialize session state variables for operations data if they don't exist
