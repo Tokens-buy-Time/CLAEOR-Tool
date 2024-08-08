@@ -181,9 +181,9 @@ def operations_screen_1(rerun_1):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_1=0
-# elif 
-# rerun_1=1
+#           rerun_1=0
+#       elif 
+#           rerun_1=1
 
 
 
@@ -229,9 +229,9 @@ def operations_screen_2(rerun_2):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")# rerun_1=0
-# rerun_2=0
-# elif 
-# rerun_2=1
+#           rerun_2=0
+#       elif 
+#           rerun_2=1
 
 
 # Year 3 Screen
@@ -276,10 +276,10 @@ def operations_screen_3(rerun_3):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_3=0
-# elif 
-# rerun_3=1
-j
+#           rerun_3=0
+#       elif 
+#           rerun_3=1
+
 
 # Year 4 Screen
 # Function to display and save operations data
@@ -323,9 +323,9 @@ def operations_screen_4(rerun_4):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_4=0
-# elif 
-# rerun_4=1
+#           rerun_4=0
+#       elif 
+#           rerun_4=1
 
 
 # Year 5 Screen
@@ -370,9 +370,9 @@ def operations_screen_5(rerun_5):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_5=0
-# elif 
-# rerun_5=1
+#           rerun_5=0
+#       elif 
+#           rerun_5=1
 
 
 # Year 6 Screen
@@ -417,9 +417,9 @@ def operations_screen_6(rerun_6):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_6=0
-# elif 
-# rerun_6=1
+#           rerun_6=0
+#       elif 
+#           rerun_6=1
 
 
 # Year 7 Screen
@@ -464,9 +464,9 @@ def operations_screen_7(rerun_7):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_7=0
-# elif 
-# rerun_7=1
+#           rerun_7=0
+#       elif 
+#           rerun_7=1
 
 
 # Year 8 Screen
@@ -511,9 +511,9 @@ def operations_screen_8(rerun_8):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_8=0
-# elif 
-# rerun_8=1
+#           rerun_8=0
+#       elif 
+#           rerun_8=1
 
 
 # Year 9 Screen
@@ -558,9 +558,9 @@ def operations_screen_9(rerun_9):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_9=0
-# elif 
-# rerun_9=1
+#           rerun_9=0
+#       elif 
+#           rerun_9=1
 
 
 
@@ -606,9 +606,9 @@ def operations_screen_10(rerun_10):
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
-# rerun_10=0
-# elif 
-# rerun_10=1
+#           rerun_10=0
+#       elif 
+#           rerun_10=1
 
 
 # Function to display financial statements
@@ -678,85 +678,75 @@ elif menu == "Instructions":
 elif menu == "Assumptions":
     assumptions_screen()
 elif menu == "Year 1 Operations":
-    rerun_1=0
-# operations_screen_1(rerun_1)
-    if rerun_1==1
-       rerun_1=0
-# operation_screen_1(rerun_1)
-    elif
-       home_screen()
+#    rerun_1=0
+#    operations_screen_1(rerun_1)
+#    if rerun_1==1
+#      rerun_1=0
+#      operation_screen_1(rerun_1)
+#    elif
 elif menu == "Year 2 Operations":
-    rerun_2=0
+#    rerun_2=0
 # operations_screen_2(rerun_2)
-    if rerun_2==1
-       rerun_2=0
-# operation_screen_2(rerun_2)
-    elif
-       home_screen()
+#    if rerun_2==1
+#      rerun_2=0
+#      operation_screen_2(rerun_2)
+#    elif
 elif menu == "Year 3 Operations":
-    rerun_3=0
-# operations_screen_3(rerun_3)
-    if rerun_3==1
-       rerun_3=0
-# operation_screen_3(rerun_3)
-    elif
-       home_screen()
+#    rerun_3=0
+#    operations_screen_3(rerun_3)
+#    if rerun_3==1
+#      rerun_3=0
+#      operation_screen_3(rerun_3)
+#    elif
 elif menu == "Year 4 Operations":
-    rerun_4=0
-# operations_screen_4(rerun_4)
-    if rerun_4==1
-       rerun_4=0
-# operation_screen_4(rerun_4)
-    elif
-       home_screen()
+#    rerun_4=0
+#    operations_screen_4(rerun_4)
+#    if rerun_4==1
+#      rerun_4=0
+#      operation_screen_4(rerun_4)
+#    elif
 elif menu == "Year 5 Operations":
-    rerun_5=0
-# operations_screen_5(rerun_5)
-    if rerun_5==1
-       rerun_5=0
-# operation_screen_5(rerun_5)
-    elif
-       home_screen()
+#    rerun_5=0
+#    operations_screen_5(rerun_5)
+#    if rerun_5==1
+#      rerun_5=0
+#      operation_screen_5(rerun_5)
+#    elif
 elif menu == "Year 6 Operations":
-    rerun_6=0
-# operations_screen_6(rerun_6)
-    if rerun_6==1
-       rerun_6=0
-# operation_screen_6(rerun_6)
-    elif
-       home_screen()
+#    rerun_6=0
+#    operations_screen_6(rerun_6)
+#    if rerun_6==1
+#      rerun_6=0
+#      operation_screen_6(rerun_6)
+#    elif
 elif menu == "Year 7 Operations":
-    rerun_7=0
-# operations_screen_7(rerun_7)
-    if rerun_7==1
-       rerun_7=0
-# operation_screen_7(rerun_7)
-    elif
-       home_screen()
+#    rerun_7=0
+#    operations_screen_7(rerun_7)
+#    if rerun_7==1
+#      rerun_7=0
+#      operation_screen_7(rerun_7)
+#    elif
 elif menu == "Year 8 Operations":
-    rerun_8=0
-# operations_screen_8(rerun_8)
-    if rerun_8==1
-       rerun_8=0
-# operation_screen_8(rerun_8)
-    elif
-       home_screen()
+#    rerun_8=0
+#    operations_screen_8(rerun_8)
+#    if rerun_8==1
+#      rerun_8=0
+#      operation_screen_8(rerun_8)
+#    elif
 elif menu == "Year 9 Operations":
-    rerun_9=0
-# operations_screen_9(rerun_9)
-    if rerun_9==1
-       rerun_9=0
-# operation_screen_9(rerun_9)
-    elif
-       home_screen()
+#    rerun_9=0
+#    operations_screen_9(rerun_9)
+#    if rerun_9==1
+#      rerun_9=0
+#      operation_screen_9(rerun_9)
+#    elif
 elif menu == "Year 10 Operations":
-    rerun_10=0
-# operations_screen_10(rerun_10)
-    if rerun_10==1
-       rerun_10=0
-# operation_screen_10(rerun_10)
-    elif
-       home_screen()
+#    rerun_10=0
+#    operations_screen_10(rerun_10)
+#    if rerun_10==1
+#      rerun_10=0
+#      operation_screen_10(rerun_10)
+#    elif
 elif menu == "Financial Statements":
     financial_statements_screen()
 elif menu == "Performance Metrics":
