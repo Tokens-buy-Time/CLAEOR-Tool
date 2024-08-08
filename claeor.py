@@ -391,25 +391,25 @@ def operations_screen_5(rerun_5):
     Year_n = 5
     st.subheader(f"Year {Year_n}")
     
-    for i in range(40,49):
+    for i in range(0,9):
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data_5"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_5"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data_5"][i])
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
@@ -438,25 +438,25 @@ def operations_screen_6(rerun_6):
     Year_n = 6
     st.subheader(f"Year {Year_n}")
 
-    for i in range(50,59):
+    for i in range(0,5):
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data_6"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_6"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data_6"][i])
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
@@ -485,25 +485,25 @@ def operations_screen_7(rerun_7):
     Year_n = 7
     st.subheader(f"Year {Year_n}")
     
-    for i in range(60,69):
+    for i in range(0,9):
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Target Rental hrs", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Size of fleet", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Number of aircraft sold", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Operating Expenses $", value=st.session_state["operations_data_7"][i])
         i=i+1
-        st.session_state["operations_data"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data"][i])
+        st.session_state["operations_data_7"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data_7"][i])
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
