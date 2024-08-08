@@ -673,12 +673,99 @@ def operations_screen_10():
         break
 
 
-# Function to display financial statements
+# Function to calculate and display financial statements
 def financial_statements_screen():
     st.header("Financial Statements")    
     st.write(" ")
     st.write("Each year's Income, Balance and Cash Flow Statement, uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
-    Income_Year()
+    
+    
+    # Basic Financial performance Data :-
+
+            financials = calculate_financials(statement_year, assumptions, operational_data)
+
+
+def calculate_financials(year, assumptions, operational_data_1):
+    billable_hours = operations_data_1[1]
+    num_aircraft = operations_data_1[2]
+    aircraft_sold = operations_data_1[3]
+    mro_revenue = operations_data_1[6]
+    partnership_revenue = operations_data_1[7]
+    operating_expenses = operations_data-1[8]
+    capital_supplied = operations_data_1[9]
+    rental_revenue = assumptions[0]
+    aircraft_price = assumptions[6]
+    variable_cost_per_hour 
+    fixed_cost = assumptions[]
+    
+    revenue = rental_revenue * billable_hours * num_aircraft
+    aircraft_sale_revenue = aircraft_price * aircraft_sold
+    total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sale_revenue
+    
+    operating_expenses = fixed_costs + financials_depreciation
+    
+    cogs = variable_cost_per_hour * billable_hours * num_aircraft
+    gross_profit = total_revenue * (assumptions["gross_margin"] / 100)
+    
+    depreciation = assumptions["fixed_costs"] * assumptions["depreciation_rate"]
+    operating_profit = gross_profit - assumptions["fixed_costs"] - depreciation - operating_expenses
+    interest = assumptions["fixed_costs"] * assumptions["interest_rate"]
+    tax = operating_profit * assumptions["tax_rate"]
+    net_profit = operating_profit - interest - tax
+    
+    assets = gross_profit - (interest + tax) + capital_supplied
+    liabilities = assumptions["fixed_costs"] * (assumptions["debt_to_equity_ratio"] / 100)
+    equity = net_profit
+
+    cash_flow_operating = net_profit
+    cash_flow_investing = -depreciation
+    cash_flow_financing = assumptions["fixed_costs"] - interest + capital_supplied
+    net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
+
+
+
+return  
+
+        {
+            "revenue": total_revenue,
+            "cogs": cogs,
+            "gross_profit": gross_profit,
+            "depreciation": depreciation,
+            "operating_profit": operating_profit,
+            "interest": interest,
+            "tax": tax,
+            "net_profit": net_profit,
+            "assets": assets,
+            "liabilities": liabilities,
+            "equity": equity,
+            "cash_flow_operating": cash_flow_operating,
+            "cash_flow_investing": cash_flow_investing,
+            "cash_flow_financing": cash_flow_financing,
+            "net_cash_flow": net_cash_flow,
+            "capital_supplied": capital_supplied
+        }
+
+
+            st.write(f"Income Statement for Year {statement_year}")
+            Income_Year()
+
+            st.write(f"Revenue: ${financials['revenue']:.2f}")
+            st.write(f"COGS: ${financials['cogs']:.2f}")
+            
+            st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
+            st.write(f"Operating Expenses: ${assumptions['fixed_costs'] + financials['depreciation']:.2f}")
+            st.write(f"Operating Profit: ${financials['operating_profit']:.2f}")
+            st.write(f"Interest Expense: ${financials['interest']:.2f}")
+            st.write(f"Taxes: ${financials['tax']:.2f}")
+            st.write(f"Net Profit: ${financials['net_profit']:.2f}")
+    
+    
+    
+    
+    
+    
+    
+
     Balance_Sheet_Year()
     Cash_Flow_Year()
 
