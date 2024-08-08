@@ -677,7 +677,7 @@ def operations_screen_10():
 def financial_statements_screen():
     st.header("Financial Statements")    
     st.write(" ")
-    st.write("Each year's Income, Balance and Cash Flow Statement use the last saved data for the particular year")
+    st.write("Each year's Income, Balance and Cash Flow Statement use the last saved data for the particular year. The respective statements will appear directly below the saved input assumptions & operational data for each particular year.")
     Income_Year()
     Balance_Sheet_Year()
     Cash_Flow_Year()
