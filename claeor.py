@@ -228,8 +228,8 @@ def operations_screen_1():
         st.write("press save button to save entries above")
         st.write(" ")
         
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
          
 
 # Year 2 Screen
@@ -275,9 +275,9 @@ def operations_screen_2():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-          
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -324,9 +324,9 @@ def operations_screen_3():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -373,9 +373,9 @@ def operations_screen_4():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -422,9 +422,9 @@ def operations_screen_5():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -471,9 +471,9 @@ def operations_screen_6():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-               
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -520,9 +520,9 @@ def operations_screen_7():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -569,9 +569,9 @@ def operations_screen_8():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
@@ -618,9 +618,9 @@ def operations_screen_9():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-             
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
 
 
 
@@ -667,9 +667,9 @@ def operations_screen_10():
         st.write(" ")
         st.write("press save button to save entries above")
         st.write(" ")
-              
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
