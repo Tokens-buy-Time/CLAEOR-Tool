@@ -214,7 +214,7 @@ def operations_screen_1():
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="Gross Margin %", value=st.session_state["operations_data_1"][i])
         i=i+1
-        st.session_state["operations_data_1"][i] = st.number_input(label=Debt to Equity ratio", value=st.session_state["operations_data_1"][i])
+        st.session_state["operations_data_1"][i] = st.number_input(label="Debt to Equity ratio", value=st.session_state["operations_data_1"][i])
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="MRO services Revenue $", value=st.session_state["operations_data_1"][i])
         i=i+1
