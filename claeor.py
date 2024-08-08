@@ -220,7 +220,7 @@ def operations_screen_1(rerun_1):
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="Partnership Revenue $", value=st.session_state["operations_data_1"][i])
         i=i+1
-        st.session_state["operations_data_1"][i] = st.number_input(label="Operating Expenses, value=st.session_state["operations_data_1"][i])
+        st.session_state["operations_data_1"][i] = st.number_input(label="Operating Expenses", value=st.session_state["operations_data_1"][i])
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data_1"][i])
         
