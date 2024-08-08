@@ -712,14 +712,14 @@ def home_screen():
     st.write("""
         Welcome to the CLAEOR Tool. This application allows you to input and save assumptions and operational data 
         for your business. You can then view the financial statements and performance metrics based on the provided 
-        data. Use the sidebar to navigate through different sections of the tool.
+        data. Use the sidebar to navigate through different sections of the tool. It is recommended that you select and review the "Instructions" menu option prior to using the App.
     """)
 
 # Instructions function
 def instructions_screen():
     st.title("Instructions")
     st.write("""
-        To execute this App's functions, mobile users will notice an arrow (greater than equal character) at the top left hand corner of the screen when the device is being held in portrate mode.
+        To execute this App's functions, mobile users will notice an arrow (greater than equal character) at the top left hand corner of the screen when the device is being held in portrait mode.
         Click on the arrow to access a drop-down menu of available features.
         It is recommended that you adhere to the following sequence when operating the App.
         
