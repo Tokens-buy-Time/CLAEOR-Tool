@@ -676,12 +676,14 @@ def operations_screen_10():
 # Function to display financial statements
 def financial_statements_screen():
     
-    st.write("Each year'd Income, Balance and Cash Flow Statement use the last saved data for the particular year")
+    st.write("Each year's Income, Balance and Cash Flow Statement use the last saved data for the particular year")
+    Income_Year():
+    Balance_Sheet_Year():
+    Cash_Flow_Year():
 
 
 # Function to display Income Statement
 def Income_Year():
-    
     st.header("Financial Statements")
     st.subheader("Income Statement")
     st.write("Income statement details will be displayed here.")
@@ -689,21 +691,20 @@ def Income_Year():
 
 # Function to display Balance Sheet Statement
 def Balance_Sheet_Year():
-
     st.header("Financial Statements")
     st.subheader("Balance Sheet")
     st.write("Balance sheet details will be displayed here.")
 
 
 # Function to display Cash Flow Statement
-def Cash_Flow_Year():
+def Cash_Flow_Year(): 
     st.header("Financial Statements")   
     st.subheader("Cash Flow Statement")
     st.write("Cash flow statement details will be displayed here.")
 
 
 # Function to display performance metrics
-def performance_metrics():
+def performance_metrics_screen():
     st.header("Financial Statements")      
     st.header("Performance Metrics")
     st.write("Metrics will be calculated and displayed here based on the input data.")
