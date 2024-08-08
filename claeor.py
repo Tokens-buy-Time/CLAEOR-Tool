@@ -203,7 +203,7 @@ def operations_screen_1(rerun_1):
     Year_n = 1
     st.subheader(f"Year {Year_n}")
 
-    for i, label, in enumerate(Ops_labels)
+    for i, label, in enumerate(Ops_labels):
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(Ops_labels, value=st.session_state["operations_data_1"][i])
         i=i+1
