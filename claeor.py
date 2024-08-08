@@ -223,9 +223,10 @@ def operations_screen_1():
         st.session_state["operations_data_1"][i] = st.number_input(label="Operating Expenses", value=st.session_state["operations_data_1"][i])
         i=i+1
         st.session_state["operations_data_1"][i] = st.number_input(label="Investor Capital Calls $", value=st.session_state["operations_data_1"][i])
-        
+
+        st.write(" ")
         st.write("press save button to save entries above")
-        i=i-10
+        st.write(" ")
         
         if st.button(f"Save year's input data"):
             st.success(f"Year's input data saved!")
