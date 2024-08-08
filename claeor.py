@@ -234,6 +234,7 @@ def operations_screen_1():
         st.write(" ")
         st.write(" ")
         st.write(" ")
+        break
 
 # Year 2 Screen
 # Function to display and save operations data
