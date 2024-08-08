@@ -226,8 +226,8 @@ def operations_screen_1():
         
         st.write("press save button to save entries above")
         
-    if st.button(f"Save year's input data"):
-        st.success(f"Year's input data saved!")
+        if st.button(f"Save year's input data"):
+            st.success(f"Year's input data saved!")
             
 
 
