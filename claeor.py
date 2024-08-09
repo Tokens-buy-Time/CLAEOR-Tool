@@ -673,20 +673,22 @@ def operations_screen_10():
         break
 
 
+
 # Function to calculate and display financial statements
-def financial_statements_screen(assumptions, operations_data_1):
+def financial_statements_screen():
     st.header("Financial Statements")    
     st.write(" ")
-    st.write("Each year's Income, Balance and Cash Flow Statement uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
+    st.write("Each year's Income, Balance, and Cash Flow Statement uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
     
-    # Call to calculate financial data
+    # Basic Financial performance Data
     financials = calculate_financials(assumptions, operations_data_1)
     
-    # Pass financials and year to the Income Statement display function
-    Income_Year(financials, Year_n)
+    # Display the Income Statement
+    Income_Year(financials)
 
 
 def calculate_financials(assumptions, operations_data_1):
+    # Extract relevant data
     billable_hours = operations_data_1[1]
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
@@ -703,20 +705,21 @@ def calculate_financials(assumptions, operations_data_1):
     interest_rate = assumptions[4]
     tax_rate = assumptions[5]
     aircraft_price = assumptions[6]
-
+    
+    # Calculate various financials
     revenue = rental_revenue_rate * billable_hours * num_aircraft
     aircraft_sales_revenue = aircraft_price * aircraft_sold
     total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sales_revenue
 
-    aircraft_purchase_price = (aircraft_price / (1+(gross_margin/100)))
+    aircraft_purchase_price = (aircraft_price / (1 + (gross_margin / 100)))
     aircraft_order_cost = num_aircraft * aircraft_purchase_price
-
+    
     depreciation_rate = (amortization_rate + interest_rate) / 2 
-    depreciation_expense = depreciation_rate * capital_supplied
-    operating_expenses = fixed_cost + depreciation_expense
+    depreciation_expense = depreciation_rate * capital_supplied  # Capital Supplied used to purchase long-term assets only
+    operating_expenses = fixed_cost + depreciation_expense  # fixed_cost are non-capital expenditures
 
     cogs = variable_cost_per_hour * billable_hours * num_aircraft
-    gross_profit = total_revenue * (gross_margin/100)
+    gross_profit = total_revenue * (gross_margin / 100)
     
     operating_profit = gross_profit - fixed_cost - operating_expenses
     interest_expense = fixed_cost * interest_rate
@@ -733,12 +736,12 @@ def calculate_financials(assumptions, operations_data_1):
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
     return {
-        "revenue": total_revenue,
+        "total_revenue": total_revenue,
         "cogs": cogs,
         "gross_profit": gross_profit,
         "depreciation": depreciation_expense,
         "operating_profit": operating_profit,
-        "interest": interest_expense,
+        "interest_expense": interest_expense,
         "tax": tax,
         "net_profit": net_profit,
         "assets": assets,
@@ -750,25 +753,30 @@ def calculate_financials(assumptions, operations_data_1):
         "net_cash_flow": net_cash_flow,
         "capital_supplied": capital_supplied
     }
+    
 
 # Function to display Income Statement
-def Income_Year(financials, Year_n):
+def Income_Year(financials):
     st.subheader("Income Statement")
     st.write("Income statement details will be displayed here.")
+    
+    # Replace `Year_n` with an actual year value or variable if necessary
+    Year_n = "1"  # Example placeholder
 
     st.write(f"Income Statement for Year {Year_n}")
     
-    st.write(f"Revenue: ${financials['revenue']:.2f}")
+    st.write(f"Revenue: ${financials['total_revenue']:.2f}")
     st.write(f"COGS: ${financials['cogs']:.2f}")
     st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
 
     st.write(f"Operating Expenses: ${assumptions[2] + financials['depreciation']:.2f}")
     st.write(f"Operating Profit: ${financials['operating_profit']:.2f}")
             
-    st.write(f"Interest Expense: ${financials['interest']:.2f}")
+    st.write(f"Interest Expense: ${financials['interest_expense']:.2f}")
     st.write(f"Taxes: ${financials['tax']:.2f}")
             
     st.write(f"Net Profit: ${financials['net_profit']:.2f}")
+
 
 
 # Function to display Balance Sheet Statement
