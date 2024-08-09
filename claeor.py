@@ -780,7 +780,7 @@ def Income_Year(financials):
 
 
 # Function to display Balance Sheet Statement
-def Balance_Sheet_Year():
+def Balance_Sheet_Year(financials):
     st.subheader("Balance Sheet")
     st.write("Balance sheet details will be displayed here.")
     st.write(" ")
@@ -789,7 +789,7 @@ def Balance_Sheet_Year():
 
 
 # Function to display Cash Flow Statement
-def Cash_Flow_Year(): 
+def Cash_Flow_Year(financials): 
     st.subheader("Cash Flow Statement")
     st.write("Cash flow statement details will be displayed here.")
     st.write(" ")
