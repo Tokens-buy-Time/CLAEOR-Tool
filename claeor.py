@@ -762,7 +762,7 @@ def Income_Year():
     st.write(f"Income Statement for Year {Year_n}")
     Income_Year()
 
-    st.write(f"Revenue: ${financials['revenue']:.2f}")
+    st.write(f"Revenue: ${financials['total_revenue']:.2f}")
     st.write(f"COGS: ${financials['cogs']:.2f}")
     st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
 
