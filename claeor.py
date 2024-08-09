@@ -760,8 +760,8 @@ def calculate_financials(Year_n, assumptions, operations_data):
 
 # Function to display Income Statement
 def Income_Year(financials):
+    st.write(" ")
     st.subheader("Income Statement")
-    st.write("Income statement details will be displayed here.")
     st.write(" ")
     st.write("Income Statement for Year  ", Year_n) 
     
@@ -781,8 +781,8 @@ def Income_Year(financials):
 
 # Function to display Balance Sheet Statement
 def Balance_Sheet_Year(financials):
+    st.write(" ")
     st.subheader("Balance Sheet")
-    st.write("Balance sheet details will be displayed here.")
     st.write(" ")
     st.write("Balance Sheet for Year ", Year_n)  
 
@@ -790,8 +790,8 @@ def Balance_Sheet_Year(financials):
 
 # Function to display Cash Flow Statement
 def Cash_Flow_Year(financials): 
+    st.write(" ")    
     st.subheader("Cash Flow Statement")
-    st.write("Cash flow statement details will be displayed here.")
     st.write(" ")
     st.write("Cash Flow Statement for Year ", Year_n)
 
