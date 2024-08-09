@@ -681,10 +681,10 @@ def financial_statements_screen():
     
     
     # Basic Financial performance Data :-1
-    financials = calculate_financials(assumptions, operational_data_1)
+    financials = calculate_financials(assumptions, operations_data_1)
 
 
-def calculate_financials(assumptions, operational_data_1):
+def calculate_financials(assumptions, operations_data_1):
     billable_hours = operations_data_1[1]
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
