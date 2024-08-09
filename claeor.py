@@ -760,7 +760,7 @@ def Income_Year(financials):
     st.subheader("Income Statement")
     st.write("Income statement details will be displayed here.")
     st.write(" ")
-    st.write("Income Statement for Year" Year_n)
+    st.write("Income Statement for Year", Year_n)
     
     st.write(f"Revenue: ${financials['total_revenue']:.2f}")
     st.write(f"COGS: ${financials['cogs']:.2f}")
