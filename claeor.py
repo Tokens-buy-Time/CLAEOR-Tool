@@ -853,31 +853,27 @@ elif menu == "Instructions":
 elif menu == "Assumptions":
     assumptions_screen()
 elif menu == "Operations - Year 1":
-     operations_screen_1()
+    operations_screen_1()
 elif menu == "Operations - Year 2":
-     operations_screen_2()
+    operations_screen_2()
 elif menu == "Operations - Year 3":
-     operations_screen_3()
+    operations_screen_3()
 elif menu == "Operations - Year 4":
-     operations_screen_4()
+    operations_screen_4()
 elif menu == "Operations - Year 5":
-     operations_screen_5()
+    operations_screen_5()
 elif menu == "Operations - Year 6":
-     operations_screen_6()
+    operations_screen_6()
 elif menu == "Operations - Year 7":
-     operations_screen_7()
+    operations_screen_7()
 elif menu == "Operations - Year 8":
-     operations_screen_8()
+    operations_screen_8()
 elif menu == "Operations - Year 9":
-     operations_screen_9()
+    operations_screen_9()
 elif menu == "Operations - Year 10":
-     operations_screen_10()
+    operations_screen_10()
 elif menu == "Financial Statements":
-    if "assumptions" not in st.sessions_state:
-        instructions()
-    if "operations_data_1" not in st.sessions_state:
-        instructions()
     financial_statements_screen(assumptions, operations_data_1)
 elif menu == "Performance Metrics":
-     performance_metrics_screen()
+    performance_metrics_screen()
 
