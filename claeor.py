@@ -807,7 +807,7 @@ def Cash_Flow_Year(financials):
 def performance_metrics_screen(Year_n, assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10):
     st.write(" ")
     st.header("Performance Metrics")
-    st.write("Metrics calculated and displayed here ate based on the input data.")
+    st.write("Metrics calculated and displayed here ate based upon all of the input data.")
     st.write(" ")
     if "assumptions" in st.session_state:
         assumptions = st.session_state["assumptions"]
