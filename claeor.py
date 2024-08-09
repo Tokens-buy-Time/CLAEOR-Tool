@@ -734,24 +734,24 @@ def calculate_financials(Year_n, assumptions, operational_data_1):
 
 return  
 
-        {
-            "revenue": total_revenue,
-            "cogs": cogs,
-            "gross_profit": gross_profit,
-            "depreciation": depreciation,
-            "operating_profit": operating_profit,
-            "interest": interest,
-            "tax": tax,
-            "net_profit": net_profit,
-            "assets": assets,
-            "liabilities": liabilities,
-            "equity": equity,
-            "cash_flow_operating": cash_flow_operating,
-            "cash_flow_investing": cash_flow_investing,
-            "cash_flow_financing": cash_flow_financing,
-            "net_cash_flow": net_cash_flow,
-            "capital_supplied": capital_supplied
-        }
+{
+    "revenue": total_revenue,
+    "cogs": cogs,
+    "gross_profit": gross_profit,
+    "depreciation": depreciation,
+    "operating_profit": operating_profit,
+    "interest": interest,
+    "tax": tax,
+    "net_profit": net_profit,
+    "assets": assets,
+    "liabilities": liabilities,
+    "equity": equity,
+    "cash_flow_operating": cash_flow_operating,
+    "cash_flow_investing": cash_flow_investing,
+    "cash_flow_financing": cash_flow_financing,
+    "net_cash_flow": net_cash_flow,
+    "capital_supplied": capital_supplied
+}
     
 
 # Function to display Income Statement
