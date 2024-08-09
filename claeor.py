@@ -681,6 +681,7 @@ def financial_statements_screen():
     
     
     # Basic Financial performance Data :-1
+    Year_n = 1
     financials = calculate_financials(Year_n, assumptions, operations_data_1)
 
 
