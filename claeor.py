@@ -18,7 +18,7 @@ if "assumptions" not in st.session_state:
 if "operations_data_1" not in st.session_state:
     st.session_state["operations_data_1"] = [
         1, # Year
-        250, # Billable hourd
+        250, # Billable hours
         20, # Number of fleet aircraft
         10, # Number of aircraft sold
         50.0, # Gross Margin percentage
@@ -689,37 +689,41 @@ def calculate_financials(year, assumptions, operational_data_1):
     billable_hours = operations_data_1[1]
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
+    gross_margin = operations_data_1[4]
     mro_revenue = operations_data_1[6]
     partnership_revenue = operations_data_1[7]
-    operating_expenses = operations_data-1[8]
+    operating_expenses = operations_data_1[8]
     capital_supplied = operations_data_1[9]
     rental_revenue = assumptions[0]
     aircraft_price = assumptions[6]
     variable_cost_per_hour 
-    fixed_cost = assumptions[]
+    fixed_cost = assumptions[2]
+    amortization_rate = assumptions[3]
+    interest_rate = assumptions[4]
+    tax_rate = assumptions[6]
+    debt_equity_ratio = operations_data_1[5]
     
     revenue = rental_revenue * billable_hours * num_aircraft
     aircraft_sale_revenue = aircraft_price * aircraft_sold
     total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sale_revenue
     
-    operating_expenses = fixed_costs + financials_depreciation
-    
+    operating_expenses = fixed_costs + depreciation_expense
+    depreciation_rate = (amortization_rate+interest_rate)/2
     cogs = variable_cost_per_hour * billable_hours * num_aircraft
-    gross_profit = total_revenue * (assumptions["gross_margin"] / 100)
+    gross_profit = total_revenue * (gross_margin/100)
     
-    depreciation = assumptions["fixed_costs"] * assumptions["depreciation_rate"]
-    operating_profit = gross_profit - assumptions["fixed_costs"] - depreciation - operating_expenses
-    interest = assumptions["fixed_costs"] * assumptions["interest_rate"]
-    tax = operating_profit * assumptions["tax_rate"]
+    operating_profit = gross_profit - fixed_cost - operating_expenses
+    interest_expense = fixed_costs * interest_rate
+    tax = operating_profit * tax_rate
     net_profit = operating_profit - interest - tax
     
     assets = gross_profit - (interest + tax) + capital_supplied
-    liabilities = assumptions["fixed_costs"] * (assumptions["debt_to_equity_ratio"] / 100)
+    liabilities = fixed_cost * debt_equity_ratio
     equity = net_profit
 
     cash_flow_operating = net_profit
     cash_flow_investing = -depreciation
-    cash_flow_financing = assumptions["fixed_costs"] - interest + capital_supplied
+    cash_flow_financing = fixed_costs - interest + capital_supplied
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
 
