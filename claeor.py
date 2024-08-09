@@ -760,7 +760,7 @@ def Income_Year():
     st.write("Income statement details will be displayed here.")
 
     st.write(f"Income Statement for Year {Year_n}")
-        Income_Year()
+    Income_Year()
 
     st.write(f"Revenue: ${financials['revenue']:.2f}")
     st.write(f"COGS: ${financials['cogs']:.2f}")
@@ -781,7 +781,7 @@ def Balance_Sheet_Year():
     st.write("Balance sheet details will be displayed here.")
 
     st.write(f"Balance Sheet for Year {Year_n}")  
-        Balance_Sheet_Year()
+    Balance_Sheet_Year()
 
 
 # Function to display Cash Flow Statement
@@ -790,7 +790,7 @@ def Cash_Flow_Year():
     st.write("Cash flow statement details will be displayed here.")
 
     st.write(f"Cash Flow Statement for Year {Year_n}")
-        Cash_Flow_Year()
+    Cash_Flow_Year()
 
 
 # Function to display performance metrics
