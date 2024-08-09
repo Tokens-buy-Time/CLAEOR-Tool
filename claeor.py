@@ -685,6 +685,9 @@ def financial_statements_screen(Year_n, assumptions, operations_data):
  
     # Calculations to display the Income Statement, Balance Sheet & Cash flow Statement
     Income_Year(financials)
+    Balance_Sheet_Year(financials)
+    Cash_Flow_Year(financials)
+    
 
 def calculate_financials(Year_n, assumptions, operations_data):
     # Extract relevant data
@@ -780,18 +783,18 @@ def Income_Year(financials):
 def Balance_Sheet_Year():
     st.subheader("Balance Sheet")
     st.write("Balance sheet details will be displayed here.")
+    st.write(" ")
+    st.write("Balance Sheet for Year ", Year_n)  
 
-    st.write(f"Balance Sheet for Year {Year_n}")  
-    Balance_Sheet_Year()
 
 
 # Function to display Cash Flow Statement
 def Cash_Flow_Year(): 
     st.subheader("Cash Flow Statement")
     st.write("Cash flow statement details will be displayed here.")
+    st.write(" ")
+    st.write("Cash Flow Statement for Year ", Year_n)
 
-    st.write(f"Cash Flow Statement for Year {Year_n}")
-    Cash_Flow_Year()
 
 
 # Function to display performance metrics
