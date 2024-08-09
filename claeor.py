@@ -873,9 +873,9 @@ elif menu == "Operations - Year 9":
 elif menu == "Operations - Year 10":
      operations_screen_10()
 elif menu == "Financial Statements":
-    if assumptions == "":
+    if "assumptions" not in st.sessions_state:
         instructions()
-    if operations_data_1 == "":
+    if "operations_data_1" not in st.sessions_state:
         instructions()
     financial_statements_screen(assumptions, operations_data_1)
 elif menu == "Performance Metrics":
