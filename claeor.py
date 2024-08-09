@@ -682,8 +682,8 @@ def financial_statements_screen():
     
 # Basic Financial performance Data :-1
     Year_n = 1
-    fs_assumptions = st.session('assumptions')
-    fs_operations_data_1 = st.session(operations_data_1)
+    fs_assumptions = st.session_state("assumptions")
+    fs_operations_data_1 = st.session_state("operations_data_1")
     
     financials = calculate_financials(Year_n, fa_assumptions, fs_operations_data_1)
 
