@@ -762,9 +762,8 @@ def calculate_financials(Year_n, assumptions, operations_data):
 def Income_Year(financials):
     st.write(" ")
     st.subheader("Income Statement")
-    st.write(" ")
     st.write("Income Statement for Year  ", Year_n) 
-    
+    st.write(" ")
     st.write(f"Revenue: ${financials['total_revenue']:.2f}")
     st.write(f"COGS: ${financials['cogs']:.2f}")
     st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
@@ -783,18 +782,16 @@ def Income_Year(financials):
 def Balance_Sheet_Year(financials):
     st.write(" ")
     st.subheader("Balance Sheet")
-    st.write(" ")
     st.write("Balance Sheet for Year ", Year_n)  
-
+    st.write(" ")
 
 
 # Function to display Cash Flow Statement
 def Cash_Flow_Year(financials): 
     st.write(" ")    
     st.subheader("Cash Flow Statement")
-    st.write(" ")
     st.write("Cash Flow Statement for Year ", Year_n)
-
+    st.write(" ")
 
 
 # Function to display performance metrics
