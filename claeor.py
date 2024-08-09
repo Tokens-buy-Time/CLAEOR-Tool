@@ -682,10 +682,10 @@ def financial_statements_screen():
     
     # Basic Financial performance Data :-
 
-            financials = calculate_financials(statement_year, assumptions, operational_data)
+    financials = calculate_financials(Year_n, assumptions, operational_data_1)
 
 
-def calculate_financials(year, assumptions, operational_data_1):
+def calculate_financials(Year_n, assumptions, operational_data_1):
     billable_hours = operations_data_1[1]
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
@@ -732,8 +732,6 @@ def calculate_financials(year, assumptions, operational_data_1):
     cash_flow_financing = fixed_costs - interest + capital_supplied
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
-
-
 return  
 
         {
@@ -756,28 +754,29 @@ return
         }
 
 
-            st.write(f"Income Statement for Year {statement_year}")
+        st.write(f"Income Statement for Year {Year_n}")
             Income_Year()
 
             st.write(f"Revenue: ${financials['revenue']:.2f}")
             st.write(f"COGS: ${financials['cogs']:.2f}")
-            
             st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
+
             st.write(f"Operating Expenses: ${assumptions['fixed_costs'] + financials['depreciation']:.2f}")
             st.write(f"Operating Profit: ${financials['operating_profit']:.2f}")
+            
             st.write(f"Interest Expense: ${financials['interest']:.2f}")
             st.write(f"Taxes: ${financials['tax']:.2f}")
+            
             st.write(f"Net Profit: ${financials['net_profit']:.2f}")
     
     
     
-    
-    
-    
-    
+        st.write(f"Balance Sheet for Year {Year_n}")  
+           Balance_Sheet_Year()
 
-    Balance_Sheet_Year()
-    Cash_Flow_Year()
+    
+        st.write(f"Cash Flow Statement for Year {Year_n}")
+           Cash_Flow_Year()
 
 
 # Function to display Income Statement
