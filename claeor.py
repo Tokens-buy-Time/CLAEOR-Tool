@@ -682,10 +682,9 @@ def financial_statements_screen(Year_n, assumptions, operations_data):
     
     # Basic Financial performance Data
     financials = calculate_financials(Year_n, assumptions, operations_data)
-    
-    # Display the Income Statement
+ 
+    # Calculations to display the Income Statement, Balance Sheet & Cash flow Statement
     Income_Year(financials)
-
 
 def calculate_financials(Year_n, assumptions, operations_data):
     # Extract relevant data
