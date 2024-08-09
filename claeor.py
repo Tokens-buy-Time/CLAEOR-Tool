@@ -690,25 +690,28 @@ def calculate_financials(year, assumptions, operational_data_1):
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
     gross_margin = operations_data_1[4]
+    debt_equity_ratio = operations_data_1[5]
     mro_revenue = operations_data_1[6]
     partnership_revenue = operations_data_1[7]
     operating_expenses = operations_data_1[8]
     capital_supplied = operations_data_1[9]
-    rental_revenue = assumptions[0]
-    aircraft_price = assumptions[6]
-    variable_cost_per_hour 
+    rental_revenue_rate = assumptions[0]
+    variable_cost_per_hour = assumptions[1]
     fixed_cost = assumptions[2]
     amortization_rate = assumptions[3]
     interest_rate = assumptions[4]
-    tax_rate = assumptions[6]
-    debt_equity_ratio = operations_data_1[5]
+    tax_rate = assumptions[5]
+    aircraft_price = assumptions[6]
+
     
-    revenue = rental_revenue * billable_hours * num_aircraft
-    aircraft_sale_revenue = aircraft_price * aircraft_sold
-    total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sale_revenue
-    
+    revenue = rental_revenue_rate * billable_hours * num_aircraft
+    aircraft_sales_revenue = aircraft_price * aircraft_sold
+    total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sales_revenue
+
+    depreciation_rate = (amortization_rate+interest_rate)/2 
+    depreaciation_expense = depreciation_rate * (num_aircraft * (aircraft_price
     operating_expenses = fixed_costs + depreciation_expense
-    depreciation_rate = (amortization_rate+interest_rate)/2
+
     cogs = variable_cost_per_hour * billable_hours * num_aircraft
     gross_profit = total_revenue * (gross_margin/100)
     
