@@ -804,45 +804,55 @@ def Cash_Flow_Year(financials):
 
 
 # Function to display performance metrics
-def performance_metrics_screen(financials):
+def performance_metrics_screen(Year_n, assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10):
     st.write(" ")
     st.header("Performance Metrics")
     st.write("Metrics calculated and displayed here ate based on the input data.")
     st.write(" ")
-    if st.session_state["assumptions"] and st.session_state["operational_data"]:
+    if "assumptions" in st.session_state:
         assumptions = st.session_state["assumptions"]
-        operational_data = st.session_state["operational_data"]
-        all_financials = {}
-        total_capital_supplied = 0
-        for year, data in operational_data.items():
-            financials = calculate_financials(year, assumptions, data)
-            all_financials[year] = financials 
-            total_capital_supplied += financials["capital_supplied"]
 
-        df_financials = pd.DataFrame(all_financials).T
+        # Aggregate all operational data
+        all_operational_data = [
+            st.session_state.get(f"operations_data_{i+1}")
+            for i in range(10)
+            if f"operations_data_{i+1}" in st.session_state
+        ]
 
-        st.write("Metrics at Fund's Exit (End of Year 10")
-        total_revenue_10 = df_financials["revenue"].sum()
-        total_net_profit_10 = df_financials["net_profit"].sum()
-        total_assets_10 = df_financials["assets"].sum()
-        total_liabilities_10 = df_financials["liabilities"].sum()
-        total_equity_10 = df_financials["equity"].sum()
-        total_capital_supplied_10 = df_financials["capital_supplied"].sum()
+        if all_operational_data:
+            all_financials = {}
+            total_capital_supplied = 0
+            for i, data in enumerate(all_operational_data, 1):
+                financials = calculate_financials(i, assumptions, data)
+                all_financials[f"Year {i}"] = financials
+                total_capital_supplied += financials["capital_supplied"]
 
-        st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
-        st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
-        st.write(f"Total Assets at Year 10: ${total_assets_10:.2f}")
-        st.write(f"Total Liabilities at Year 10: ${total_liabilities_10:.2f}")
-        st.write(f"Total Equity at Year 10: ${total_equity_10:.2f}")
-        st.write(f"Total Capital Supplied by Investors over 10 years: ${total_capital_supplied:.2f}")
+            # Convert the financials to a DataFrame
+            df_financials = pd.DataFrame(all_financials).T
 
-        irr = ((total_net_profit_10 / assumptions["fixed_costs"]) ** (1 / 10)) - 1
-        roi = (total_net_profit_10 / assumptions["fixed_costs"]) * 100
+            # Calculate and display cumulative metrics
+            st.write("Metrics at Fund's Exit (End of Year 10)")
+            total_revenue_10 = df_financials["revenue"].sum()
+            total_net_profit_10 = df_financials["net_profit"].sum()
+            total_assets_10 = df_financials["assets"].sum()
+            total_liabilities_10 = df_financials["liabilities"].sum()
+            total_equity_10 = df_financials["equity"].sum()
+            total_capital_supplied_10 = df_financials["capital_supplied"].sum()
 
-        st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
-        st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
-    else:
-        st.warning("Please input assumptions and operational data first.")
+            st.write(f"Total Revenue over 10 years: ${total_revenue_10:.2f}")
+            st.write(f"Total Net Profit over 10 years: ${total_net_profit_10:.2f}")
+            st.write(f"Total Assets at Year 10: ${total_assets_10:.2f}")
+            st.write(f"Total Liabilities at Year 10: ${total_liabilities_10:.2f}")
+            st.write(f"Total Equity at Year 10: ${total_equity_10:.2f}")
+            st.write(f"Total Capital Supplied by Investors over 10 years: ${total_capital_supplied_10:.2f}")
+
+            irr = ((total_net_profit_10 / total_capital_supplied) ** (1 / 10)) - 1
+            roi = (total_net_profit_10 / total_capital_supplied) * 100
+
+            st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
+            st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
+  
+    st.write(" ")
 
 
 # Home screen function
@@ -952,5 +962,5 @@ elif menu == "Financial Statements":
         operations_data = operations_data_10
     financial_statements_screen(Year_n, assumptions, operations_data)
 elif menu == "Performance Metrics":
-    performance_metrics_screen()
+    performance_metrics_screen(Year_n,assumptions, Year_n, assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10)
 
