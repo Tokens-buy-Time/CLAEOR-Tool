@@ -752,37 +752,27 @@ return
             "net_cash_flow": net_cash_flow,
             "capital_supplied": capital_supplied
         }
-
-
-        st.write(f"Income Statement for Year {Year_n}")
-            Income_Year()
-
-            st.write(f"Revenue: ${financials['revenue']:.2f}")
-            st.write(f"COGS: ${financials['cogs']:.2f}")
-            st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
-
-            st.write(f"Operating Expenses: ${assumptions['fixed_costs'] + financials['depreciation']:.2f}")
-            st.write(f"Operating Profit: ${financials['operating_profit']:.2f}")
-            
-            st.write(f"Interest Expense: ${financials['interest']:.2f}")
-            st.write(f"Taxes: ${financials['tax']:.2f}")
-            
-            st.write(f"Net Profit: ${financials['net_profit']:.2f}")
     
-    
-    
-        st.write(f"Balance Sheet for Year {Year_n}")  
-           Balance_Sheet_Year()
-
-    
-        st.write(f"Cash Flow Statement for Year {Year_n}")
-           Cash_Flow_Year()
-
 
 # Function to display Income Statement
 def Income_Year():
     st.subheader("Income Statement")
     st.write("Income statement details will be displayed here.")
+
+    st.write(f"Income Statement for Year {Year_n}")
+        Income_Year()
+
+    st.write(f"Revenue: ${financials['revenue']:.2f}")
+    st.write(f"COGS: ${financials['cogs']:.2f}")
+    st.write(f"Gross Profit: ${financials['gross_profit']:.2f}")
+
+    st.write(f"Operating Expenses: ${assumptions['fixed_costs'] + financials['depreciation']:.2f}")
+    st.write(f"Operating Profit: ${financials['operating_profit']:.2f}")
+            
+    st.write(f"Interest Expense: ${financials['interest']:.2f}")
+    st.write(f"Taxes: ${financials['tax']:.2f}")
+            
+    st.write(f"Net Profit: ${financials['net_profit']:.2f}")
 
 
 # Function to display Balance Sheet Statement
@@ -790,17 +780,24 @@ def Balance_Sheet_Year():
     st.subheader("Balance Sheet")
     st.write("Balance sheet details will be displayed here.")
 
+    st.write(f"Balance Sheet for Year {Year_n}")  
+        Balance_Sheet_Year()
+
 
 # Function to display Cash Flow Statement
 def Cash_Flow_Year(): 
     st.subheader("Cash Flow Statement")
     st.write("Cash flow statement details will be displayed here.")
 
+    st.write(f"Cash Flow Statement for Year {Year_n}")
+        Cash_Flow_Year()
+
 
 # Function to display performance metrics
 def performance_metrics_screen():
     st.header("Performance Metrics")
     st.write("Metrics will be calculated and displayed here based on the input data.")
+
 
 # Home screen function
 def home_screen():
