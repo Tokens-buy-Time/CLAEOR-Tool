@@ -708,9 +708,12 @@ def calculate_financials(year, assumptions, operational_data_1):
     aircraft_sales_revenue = aircraft_price * aircraft_sold
     total_revenue = revenue + mro_revenue + partnership_revenue + aircraft_sales_revenue
 
+    aircraft_purchase_price = (aircraft_price / (1+(gross_margin/100)))
+    aircraft_order_cost = num_aircraft * aircraft_purchase_price
+    
     depreciation_rate = (amortization_rate+interest_rate)/2 
-    depreaciation_expense = depreciation_rate * (num_aircraft * (aircraft_price
-    operating_expenses = fixed_costs + depreciation_expense
+    depreaciation_expense = depreciation_rate * capital_supplied # Capital Supplied used to purchase longterm assets only
+    operating_expenses = fixed_costs + depreciation_expense # fixed_cost are non-capital expenditures
 
     cogs = variable_cost_per_hour * billable_hours * num_aircraft
     gross_profit = total_revenue * (gross_margin/100)
