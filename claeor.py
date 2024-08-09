@@ -784,6 +784,9 @@ def Balance_Sheet_Year(financials):
     st.subheader("Balance Sheet")
     st.write("Balance Sheet for Year ", Year_n)  
     st.write(" ")
+    st.write(f"Assets: ${financials['assets']:.2f}")
+    st.write(f"Liabilities: ${financials['liabilities']:.2f}")
+    st.write(f"Equity: ${financials['equity']:.2f}")
 
 
 # Function to display Cash Flow Statement
