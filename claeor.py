@@ -758,10 +758,7 @@ def calculate_financials(Year_n, assumptions, operations_data):
 def Income_Year(financials):
     st.subheader("Income Statement")
     st.write("Income statement details will be displayed here.")
-    
-    # Replace `Year_n` with an actual year value or variable if necessary
-    Year_n = "1"  # Example placeholder
-
+    st.write(" ")
     st.write(f"Income Statement for Year {Year_n}")
     
     st.write(f"Revenue: ${financials['total_revenue']:.2f}")
