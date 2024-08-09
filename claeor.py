@@ -735,6 +735,7 @@ def calculate_financials(Year_n, assumptions, operations_data):
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
     return {
+        "Year_n": Year_n,
         "total_revenue": total_revenue,
         "cogs": cogs,
         "gross_profit": gross_profit,
