@@ -775,7 +775,7 @@ def Income_Year(financials):
     st.write(f"Taxes: ${financials['tax']:.2f}")
             
     st.write(f"Net Profit: ${financials['net_profit']:.2f}")
-
+    st.write(" ")
 
 
 # Function to display Balance Sheet Statement
@@ -787,6 +787,7 @@ def Balance_Sheet_Year(financials):
     st.write(f"Assets: ${financials['assets']:.2f}")
     st.write(f"Liabilities: ${financials['liabilities']:.2f}")
     st.write(f"Equity: ${financials['equity']:.2f}")
+    st.write(" ")
 
 
 # Function to display Cash Flow Statement
@@ -799,6 +800,7 @@ def Cash_Flow_Year(financials):
     st.write(f"Investing Cash Flow: ${financials['cash_flow_investing']:.2f}")
     st.write(f"Financing Cash Flow: ${financials['cash_flow_financing']:.2f}")
     st.write(f"Net Cash Flow: ${financials['net_cash_flow']:.2f}")
+    st.write(" ")
 
 
 # Function to display performance metrics
