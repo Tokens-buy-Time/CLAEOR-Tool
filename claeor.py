@@ -736,7 +736,7 @@ def calculate_financials(Year_n, assumptions, operational_data_1):
     {"revenue": total_revenue,
     "cogs": cogs,
     "gross_profit": gross_profit,
-    "depreciation": depreciation,
+    "depreciation": depreciation_expense,
     "operating_profit": operating_profit,
     "interest": interest,
     "tax": tax,
