@@ -674,14 +674,14 @@ def operations_screen_10():
 
 
 # Function to calculate and display financial statements
-def financial_statements_screen():
+def financial_statements_screen_1():
     st.header("Financial Statements")    
     st.write(" ")
     st.write("Each year's Income, Balance and Cash Flow Statement, uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
     
     
     # Basic Financial performance Data :-
-
+    Year_n = 1
     financials = calculate_financials(Year_n, assumptions, operational_data_1)
 
 
