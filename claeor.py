@@ -674,18 +674,17 @@ def operations_screen_10():
 
 
 # Function to calculate and display financial statements
-def financial_statements_screen_1():
+def financial_statements_screen():
     st.header("Financial Statements")    
     st.write(" ")
     st.write("Each year's Income, Balance and Cash Flow Statement, uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
     
     
-    # Basic Financial performance Data :-
-    Year_n = 1
-    financials = calculate_financials(Year_n, assumptions, operational_data_1)
+    # Basic Financial performance Data :-1
+    financials = calculate_financials(assumptions, operational_data_1)
 
 
-def calculate_financials(Year_n, assumptions, operational_data_1):
+def calculate_financials(assumptions, operational_data_1):
     billable_hours = operations_data_1[1]
     num_aircraft = operations_data_1[2]
     aircraft_sold = operations_data_1[3]
@@ -867,7 +866,7 @@ elif menu == "Operations - Year 9":
 elif menu == "Operations - Year 10":
      operations_screen_10()
 elif menu == "Financial Statements":
-    financial_statements_screen_1()
+    financial_statements_screen()
 elif menu == "Performance Metrics":
     performance_metrics_screen()
 
