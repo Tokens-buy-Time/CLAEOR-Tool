@@ -681,26 +681,26 @@ def financial_statements_screen():
     
     
     # Basic Financial performance Data :-1
-    financials = calculate_financials(assumptions, operations_data_1)
+    financials = calculate_financials(Year_n, assumptions, operations_data_1)
 
 
-def calculate_financials(assumptions, operations_data_1):
-    billable_hours = operations_data_1[1]
-    num_aircraft = operations_data_1[2]
-    aircraft_sold = operations_data_1[3]
-    gross_margin = operations_data_1[4]
-    debt_equity_ratio = operations_data_1[5]
-    mro_revenue = operations_data_1[6]
-    partnership_revenue = operations_data_1[7]
-    operating_expenses = operations_data_1[8]
-    capital_supplied = operations_data_1[9]
-    rental_revenue_rate = assumptions[0]
-    variable_cost_per_hour = assumptions[1]
-    fixed_cost = assumptions[2]
-    amortization_rate = assumptions[3]
-    interest_rate = assumptions[4]
-    tax_rate = assumptions[5]
-    aircraft_price = assumptions[6]
+def calculate_financials(cf_Year_n, cf_assumptions, cf_operations_data_1):
+    billable_hours = cf_operations_data_1[1]
+    num_aircraft = cf_operations_data_1[2]
+    aircraft_sold = cf_operations_data_1[3]
+    gross_margin = cf_operations_data_1[4]
+    debt_equity_ratio = cf_operations_data_1[5]
+    mro_revenue = cf_operations_data_1[6]
+    partnership_revenue = cf_operations_data_1[7]
+    operating_expenses = cf_operations_data_1[8]
+    capital_supplied = cf_operations_data_1[9]
+    rental_revenue_rate = cf_assumptions[0]
+    variable_cost_per_hour = cf_assumptions[1]
+    fixed_cost = cf_assumptions[2]
+    amortization_rate = cf_assumptions[3]
+    interest_rate = cf_assumptions[4]
+    tax_rate = cf_assumptions[5]
+    aircraft_price = cf_assumptions[6]
 
     
     revenue = rental_revenue_rate * billable_hours * num_aircraft
