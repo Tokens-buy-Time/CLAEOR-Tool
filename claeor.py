@@ -874,9 +874,9 @@ elif menu == "Operations - Year 10":
      operations_screen_10()
 elif menu == "Financial Statements":
     if assumptions == "":
-    instructions()
+        instructions()
     if operations_data_1 == "":
-    instructions()
+        instructions()
     elif
     financial_statements_screen(assumptions, operations_data_1)
 elif menu == "Performance Metrics":
