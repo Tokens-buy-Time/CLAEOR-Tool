@@ -732,7 +732,7 @@ def calculate_financials(Year_n, assumptions, operational_data_1):
     cash_flow_financing = fixed_costs - interest + capital_supplied
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
-return  
+    return  
 
 {
     "revenue": total_revenue,
