@@ -675,19 +675,19 @@ def operations_screen_10():
 
 
 # Function to calculate and display financial statements
-def financial_statements_screen(assumptions, operations_data):
+def financial_statements_screen(Year_n, assumptions, operations_data):
     st.header("Financial Statements")    
     st.write(" ")
     st.write("Each year's Income, Balance, and Cash Flow Statement uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
     
     # Basic Financial performance Data
-    financials = calculate_financials(assumptions, operations_data)
+    financials = calculate_financials(Year_n, assumptions, operations_data)
     
     # Display the Income Statement
     Income_Year(financials)
 
 
-def calculate_financials(assumptions, operations_data):
+def calculate_financials(Year_n, assumptions, operations_data):
     # Extract relevant data
     billable_hours = operations_data[1]
     num_aircraft = operations_data[2]
@@ -887,28 +887,28 @@ elif menu == "Operations - Year 9":
 elif menu == "Operations - Year 10":
     operations_screen_10()
 elif menu == "Financial Statements":    
-    Chosen_Year = st.sidebar.selectbox("Navigation", ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Operations - Year 8", "Operations - Year 9", "Operations - Year 10"])
-    if Chosen_Year == "Year 1":
+    Chosen_Year = st.sidebar.selectbox("Financial Statement Year ", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+    if Chosen_Year == "1":
         operations_data = operations_data_1
-    if Chosen_Year == "Year 2":
+    if Chosen_Year == "2":
         operations_data = operations_data_2
-    if Chosen_Year == "Year 3":
+    if Chosen_Year == "3":
         operations_data = operations_data_3
-    if Chosen_Year == "Year 4":
+    if Chosen_Year == "4":
         operations_data = operations_data_4
-    if Chosen_Year == "Year 5":
+    if Chosen_Year == "5":
         operations_data = operations_data_5
-    if Chosen_Year == "Year 6":
+    if Chosen_Year == "6":
         operations_data = operations_data_6
-    if Chosen_Year == "Year 7":
+    if Chosen_Year == "7":
         operations_data = operations_data_7
-    if Chosen_Year == "Year 8":
+    if Chosen_Year == "8":
         operations_data = operations_data_8
-    if Chosen_Year == "Year 9":
+    if Chosen_Year == "9":
         operations_data = operations_data_9
-    if Chosen_Year == "Year 10":
+    if Chosen_Year == "10":
         operations_data = operations_data_10
-    financial_statements_screen(assumptions, operations_data)
+    financial_statements_screen(Chosen_Year, assumptions, operations_data)
 elif menu == "Performance Metrics":
     performance_metrics_screen()
 
