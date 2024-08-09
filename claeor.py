@@ -877,7 +877,6 @@ elif menu == "Financial Statements":
         instructions()
     if operations_data_1 == "":
         instructions()
-    elif
     financial_statements_screen(assumptions, operations_data_1)
 elif menu == "Performance Metrics":
      performance_metrics_screen()
