@@ -733,10 +733,7 @@ def calculate_financials(Year_n, assumptions, operational_data_1):
     net_cash_flow = cash_flow_operating + cash_flow_investing + cash_flow_financing
 
     return  
-
-
-{
-    "revenue": total_revenue,
+    {"revenue": total_revenue,
     "cogs": cogs,
     "gross_profit": gross_profit,
     "depreciation": depreciation,
@@ -752,7 +749,7 @@ def calculate_financials(Year_n, assumptions, operational_data_1):
     "cash_flow_financing": cash_flow_financing,
     "net_cash_flow": net_cash_flow,
     "capital_supplied": capital_supplied
-}
+    }
     
 
 # Function to display Income Statement
