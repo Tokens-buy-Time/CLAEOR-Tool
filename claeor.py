@@ -872,9 +872,7 @@ elif menu == "Operations - Year 9":
     operations_screen_9()
 elif menu == "Operations - Year 10":
     operations_screen_10()
-elif menu == "Financial Statements":
-    st.write(f"Assumptions: {assumptions}")
-    st.write(f"Operations Data: {operations_data_1}")    
+elif menu == "Financial Statements":    
     financial_statements_screen(assumptions, operations_data_1)
 elif menu == "Performance Metrics":
     performance_metrics_screen()
