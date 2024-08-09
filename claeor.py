@@ -680,9 +680,12 @@ def financial_statements_screen():
     st.write("Each year's Income, Balance and Cash Flow Statement, uses the last saved data for the particular year. The respective statements will appear directly below the saved input operations data for each particular year and will reflect the saved general assumptions as well.")
     
     
-    # Basic Financial performance Data :-1
+# Basic Financial performance Data :-1
     Year_n = 1
-    financials = calculate_financials(Year_n, assumptions, operations_data_1)
+    fs_assumptions = st.session('assumptions')
+    fs_operations_data_1 = st.session(operations_data_1)
+    
+    financials = calculate_financials(Year_n, fa_assumptions, fs_operations_data_1)
 
 
 def calculate_financials(cf_Year_n, cf_assumptions, cf_operations_data_1):
