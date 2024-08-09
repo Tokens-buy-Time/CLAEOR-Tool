@@ -885,28 +885,28 @@ elif menu == "Operations - Year 9":
 elif menu == "Operations - Year 10":
     operations_screen_10()
 elif menu == "Financial Statements":    
-    Chosen_Year = st.sidebar.selectbox("Financial Statement Year ", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-    if Chosen_Year == "1":
+    Year_n = st.sidebar.selectbox("Financial Statement Year ", ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+    if Year_n == "1":
         operations_data = operations_data_1
-    if Chosen_Year == "2":
+    if Year_n == "2":
         operations_data = operations_data_2
-    if Chosen_Year == "3":
+    if Year_n == "3":
         operations_data = operations_data_3
-    if Chosen_Year == "4":
+    if Year_n == "4":
         operations_data = operations_data_4
-    if Chosen_Year == "5":
+    if Year_n == "5":
         operations_data = operations_data_5
-    if Chosen_Year == "6":
+    if Year_n == "6":
         operations_data = operations_data_6
-    if Chosen_Year == "7":
+    if Year_n == "7":
         operations_data = operations_data_7
-    if Chosen_Year == "8":
+    if Year_n == "8":
         operations_data = operations_data_8
-    if Chosen_Year == "9":
+    if Year_n == "9":
         operations_data = operations_data_9
-    if Chosen_Year == "10":
+    if Year_n == "10":
         operations_data = operations_data_10
-    financial_statements_screen(Chosen_Year, assumptions, operations_data)
+    financial_statements_screen(Year_n, assumptions, operations_data)
 elif menu == "Performance Metrics":
     performance_metrics_screen()
 
