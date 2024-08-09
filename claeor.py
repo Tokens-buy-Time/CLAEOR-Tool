@@ -681,14 +681,10 @@ def financial_statements_screen():
     
     
 # Basic Financial performance Data :-1
-    Year_n = 1
-    fs_assumptions = st.session_state("assumptions")
-    fs_operations_data_1 = st.session_state("operations_data_1")
-    
-    financials = calculate_financials(Year_n, fa_assumptions, fs_operations_data_1)
+    financials = calculate_financials("assumptions", "operations_data_1")
 
 
-def calculate_financials(cf_Year_n, cf_assumptions, cf_operations_data_1):
+def calculate_financials(assumptions, operations_data_1):
     billable_hours = cf_operations_data_1[1]
     num_aircraft = cf_operations_data_1[2]
     aircraft_sold = cf_operations_data_1[3]
