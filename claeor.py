@@ -795,6 +795,10 @@ def Cash_Flow_Year(financials):
     st.subheader("Cash Flow Statement")
     st.write("Cash Flow Statement for Year ", Year_n)
     st.write(" ")
+    st.write(f"Operating Cash Flow: ${financials['cash_flow_operating']:.2f}")
+    st.write(f"Investing Cash Flow: ${financials['cash_flow_investing']:.2f}")
+    st.write(f"Financing Cash Flow: ${financials['cash_flow_financing']:.2f}")
+    st.write(f"Net Cash Flow: ${financials['net_cash_flow']:.2f}")
 
 
 # Function to display performance metrics
