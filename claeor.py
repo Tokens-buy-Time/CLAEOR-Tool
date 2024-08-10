@@ -827,14 +827,15 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     for year, data in enumerate(all_operational_data, start=1):
         financials = calculate_financials(year, assumptions, data)
         all_financials[year] = financials
+    
+    # Calculate metrics over 10 years
+    st.write("Metrics at Fund Exit end of Year 10")
+    st.write(" ")
 
    # Create a DataFrame from the financials
         df_financials = pd.DataFrame(all_financials).T
         st.write("Financial Data - All Years:", df_financials)
     
-    # Calculate metrics over 10 years
-    st.write("Metrics at Fund Exit end of Year 10")
-    st.write(" ")
     total_revenue_10 = df_financials["revenue"].sum()
     total_net_profit_10 = df_financials["net_profit"].sum()
     total_assets_10 = df_financials["assets"].sum()
