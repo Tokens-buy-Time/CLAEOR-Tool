@@ -808,8 +808,9 @@ def Cash_Flow_Year(financials):
 def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10):
     st.write(" ")
     st.header("Performance Metrics")
-    st.write("Metrics calculated and displayed here ate based upon all of the input data.")
+    st.write("Metrics calculated and displayed here are based upon all of the input data.")
     st.write(" ")
+    
     # Assume 'assumptions' is correctly stored in session_state
     assumptions = st.session_state["assumptions"]
 
@@ -830,7 +831,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
    # Create a DataFrame from the financials
     try:
         df_financials = pd.DataFrame(all_financials).T
-        st.write("Financial DataFrame:", df_financials)
+        st.write("Financial Data:", df_financials)
     
     # Calculate metrics over 10 years
     st.write("Metrics at Fund's Exit (End of Year 10)")
@@ -855,7 +856,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
 
-except Exception as e:
+    except Exception as e:
     st.error(f"Error creating the DataFrame or calculating metrics: {str(e)}")
 
 
