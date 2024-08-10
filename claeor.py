@@ -832,9 +832,9 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write("Metrics at Fund Exit end of Year 10")
     st.write(" ")
 
-   # Create a DataFrame from the financials
-        df_financials = pd.DataFrame(all_financials).T
-        st.write("Financial Data - All Years:", df_financials)
+    # Create a DataFrame from the financials
+    df_financials = pd.DataFrame(all_financials).T
+    st.write("Financial Data - All Years:", df_financials)
     
     total_revenue_10 = df_financials["revenue"].sum()
     total_net_profit_10 = df_financials["net_profit"].sum()
