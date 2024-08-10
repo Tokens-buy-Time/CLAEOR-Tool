@@ -856,7 +856,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
 
-    except Exception as e:
+except Exception as e:
     st.error(f"Error creating the DataFrame or calculating metrics: {str(e)}")
 
 
