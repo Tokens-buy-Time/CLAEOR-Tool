@@ -829,12 +829,8 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
         all_financials[year] = financials
 
    # Create a DataFrame from the financials
-    try:
         df_financials = pd.DataFrame(all_financials).T
         st.write("Financial Data - All Years:", df_financials)
-
-except Exception as e:
-    st.error(f"Error creating the DataFrame or calculating metrics: {str(e)}")
     
     # Calculate metrics over 10 years
     st.write("Metrics at Fund Exit end of Year 10")
