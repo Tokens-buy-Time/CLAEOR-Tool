@@ -811,26 +811,26 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write("Metrics calculated and displayed here ate based upon all of the input data.")
     st.write(" ")
     # Assume 'assumptions' is correctly stored in session_state
-assumptions = st.session_state["assumptions"]
+    assumptions = st.session_state["assumptions"]
 
-# Aggregate all operational data for each year
-all_operational_data = [
-    st.session_state[f"operations_data_{i+1}"]
-    for i in range(10)
-]
+    # Aggregate all operational data for each year
+    all_operational_data = [
+        st.session_state[f"operations_data_{i+1}"]
+        for i in range(10)
+    ]
 
-# Initialize the financials storage
-all_financials = {}
+    # Initialize the financials storage
+    all_financials = {}
 
-# Loop through each year's operational data
-for year, data in enumerate(all_operational_data, start=1):
-    financials = calculate_financials(year, assumptions, data)
-    all_financials[year] = financials
+    # Loop through each year's operational data
+    for year, data in enumerate(all_operational_data, start=1):
+        financials = calculate_financials(year, assumptions, data)
+        all_financials[year] = financials
 
-# Create a DataFrame from the financials
-try:
-    df_financials = pd.DataFrame(all_financials).T
-    st.write("Financial DataFrame:", df_financials)
+   # Create a DataFrame from the financials
+    try:
+        df_financials = pd.DataFrame(all_financials).T
+        st.write("Financial DataFrame:", df_financials)
     
     # Calculate metrics over 10 years
     st.write("Metrics at Fund's Exit (End of Year 10)")
