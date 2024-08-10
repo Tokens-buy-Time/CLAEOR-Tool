@@ -852,7 +852,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
 
     # Calculate IRR and ROI
     irr = ((total_net_profit_10 / assumptions[2]) ** (1 / 10)) - 1
-    roi = (total_net_profit_10 / assumptions[2]) * 100
+    roi = (total_net_profit_10 / dats[9]) * 100
 
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
