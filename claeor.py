@@ -940,6 +940,8 @@ def instructions_screen():
     """)
 
 # Sidebar navigation
+# Includes preparation for visual data presentation
+import matplotlib.pyplot as plt
 
 menu = st.sidebar.selectbox("Navigation", ["Home", "Instructions", "Assumptions", "Operations - Year 1", "Operations - Year 2", "Operations - Year 3", "Operations - Year 4", "Operations - Year 5", "Operations - Year 6", "Operations - Year 7", "Operations - Year 8", "Operations - Year 9", "Operations - Year 10", "Financial Statements", "Performance Metrics"])
 
@@ -1006,7 +1008,5 @@ elif menu == "Financial Statements":
         operations_data = operations_data_10
     financial_statements_screen(Year_n, assumptions, operations_data)
 elif menu == "Performance Metrics":
-    # Includes preparation for visual data presentation
-    import matplotlib.pyplot as plt
     performance_metrics_screen(assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10)
 
