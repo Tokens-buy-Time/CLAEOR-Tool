@@ -677,9 +677,6 @@ def operations_screen_10():
 
 
 # Function to calculate and display financial statements
-# Includes preparation for visual data presentation
-import matplotlib.pyplot as plt
-
 def financial_statements_screen(Year_n, assumptions, operations_data):
     st.header("Financial Statements")    
     st.write(" ")
@@ -1009,5 +1006,7 @@ elif menu == "Financial Statements":
         operations_data = operations_data_10
     financial_statements_screen(Year_n, assumptions, operations_data)
 elif menu == "Performance Metrics":
+    # Includes preparation for visual data presentation
+import matplotlib.pyplot as plt
     performance_metrics_screen(assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10)
 
