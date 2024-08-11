@@ -37,7 +37,7 @@ if "operations_data_2" not in st.session_state:
         2, 
         250, 
         20, 
-        30, 
+        35, 
         50.0,  
         0.33,  
         750000, 
@@ -52,7 +52,7 @@ if "operations_data_3" not in st.session_state:
         3, 
         500, 
         20, 
-        35, 
+        40, 
         50.0,  
         0.33, 
         1000000, 
@@ -67,12 +67,12 @@ if "operations_data_4" not in st.session_state:
         4, 
         500, 
         20, 
-        40, 
+        42, 
         50.0,  
         0.33, 
         1250000, 
         1000000, 
-        1200000,
+        1300000,
         0
     ]
 
@@ -82,12 +82,12 @@ if "operations_data_5" not in st.session_state:
         5, 
         500, 
         20, 
-        42, 
+        45,
         50.0,  
         0.33, 
         1500000, 
         1000000, 
-        1300000, 
+        1400000, 
         0
     ]
 
@@ -97,12 +97,12 @@ if "operations_data_6" not in st.session_state:
         6, 
         500, 
         20, 
-        42, 
+        45, 
         50.0,  
         0.33, 
         1600000, 
         1000000, 
-        1400000, 
+        1500000, 
         0
     ]
 
@@ -112,7 +112,7 @@ if "operations_data_7" not in st.session_state:
         7, 
         500, 
         20, 
-        42, 
+        43, 
         50.0,  
         0.33, 
         1700000, 
