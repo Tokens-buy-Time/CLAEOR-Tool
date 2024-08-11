@@ -811,6 +811,8 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.header("Performance Metrics")
     st.write("Metrics calculated and displayed here are based upon all of the input data.")
     st.write(" ")
+
+# Compile "all_financial" data from Financial Statements 
     
     # Assume 'assumptions' is correctly stored in session_state
     assumptions = st.session_state["assumptions"]
@@ -828,6 +830,19 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     for year, data in enumerate(all_operational_data, start=1):
         financials = calculate_financials(year, assumptions, data)
         all_financials[year] = financials
+
+
+
+# performance data visualization
+def performance_metrics_screen(year, assumptions, operations_data_1, operations_data_2, 
+                               operations_data_3, operations_data_4, operations_data_5, 
+                               operations_data_6, operations_data_7, operations_data_8, 
+                               operations_data_9, operations_data_10):
+                                   
+    # Assuming all_financials is already defined as a dictionary with yearly data
+    years = list(all_financials.keys())
+    net_revenue = [all_financials[year]['Net Revenue'] for year in years]
+    aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
     
     # Calculate metrics over 10 years
     st.write("Metrics at Fund Exit end of Year 10")
@@ -881,17 +896,6 @@ def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
     st.pyplot(plt)
 
 
-
-    # performance data visualization
-def performance_metrics_screen(year, assumptions, operations_data_1, operations_data_2, 
-                               operations_data_3, operations_data_4, operations_data_5, 
-                               operations_data_6, operations_data_7, operations_data_8, 
-                               operations_data_9, operations_data_10):
-                                   
-    # Assuming all_financials is already defined as a dictionary with yearly data
-    years = list(all_financials.keys())
-    net_revenue = [all_financials[year]['Net Revenue'] for year in years]
-    aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
     
     # Call the plot function
     plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
