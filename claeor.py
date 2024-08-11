@@ -22,13 +22,13 @@ if "operations_data_1" not in st.session_state:
         1, # Year
         250, # Billable hours
         20, # Number of fleet aircraft
-        10, # Number of aircraft sold
+        25, # Number of aircraft sold
         50.0, # Gross Margin percentage
         0.33,  # Debt-Equity ratio
-        300000, # MRO & FBO Revenue
+        500000, # MRO & FBO Revenue
         100000, # Partnership Revenue
-        3000000, # Expenses
-        60000000 # Capital Calls
+        1000000, # Expenses
+        23000000 # Capital Calls
     ]
     
 # Initialize session state variables for operations data if they don't exist
@@ -37,12 +37,12 @@ if "operations_data_2" not in st.session_state:
         2, 
         250, 
         20, 
-        10, 
+        30, 
         50.0,  
         0.33,  
-        400000, 
+        750000, 
         500000, 
-        3000000, 
+        1100000, 
         0
     ]
 
@@ -52,12 +52,12 @@ if "operations_data_3" not in st.session_state:
         3, 
         500, 
         20, 
-        10, 
+        35, 
         50.0,  
         0.33, 
         1000000, 
         1000000, 
-        3000000, 
+        1200000, 
         0
     ]
 
@@ -67,12 +67,12 @@ if "operations_data_4" not in st.session_state:
         4, 
         500, 
         20, 
-        10, 
+        40, 
         50.0,  
         0.33, 
+        1250000, 
         1000000, 
-        1000000, 
-        3000000,
+        1200000,
         0
     ]
 
@@ -82,12 +82,12 @@ if "operations_data_5" not in st.session_state:
         5, 
         500, 
         20, 
-        10, 
+        42, 
         50.0,  
         0.33, 
+        1500000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1300000, 
         0
     ]
 
@@ -97,12 +97,12 @@ if "operations_data_6" not in st.session_state:
         6, 
         500, 
         20, 
-        10, 
+        42, 
         50.0,  
         0.33, 
+        1600000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1400000, 
         0
     ]
 
@@ -112,12 +112,12 @@ if "operations_data_7" not in st.session_state:
         7, 
         500, 
         20, 
-        10, 
+        42, 
         50.0,  
         0.33, 
+        1700000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1500000, 
         0
     ]
 
@@ -127,12 +127,12 @@ if "operations_data_8" not in st.session_state:
         8, 
         500, 
         20, 
-        10, 
+        41, 
         50.0,  
         0.33, 
+        1800000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1500000, 
         0
     ]
 
@@ -142,12 +142,12 @@ if "operations_data_9" not in st.session_state:
         9, 
         500, 
         20, 
-        10, 
+        40, 
         50.0,  
         0.33, 
+        1900000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1500000, 
         0
     ]
 
@@ -157,12 +157,12 @@ if "operations_data_10" not in st.session_state:
         10, 
         500, 
         20, 
-        10, 
+        40, 
         50.0, 
         0.33, 
+        2000000, 
         1000000, 
-        1000000, 
-        3000000, 
+        1500000, 
         0
     ]
 
