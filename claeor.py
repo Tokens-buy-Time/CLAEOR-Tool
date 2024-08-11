@@ -865,7 +865,7 @@ def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
     plt.figure(figsize=(10, 6))
 
     # Plot Net Revenue
-    plt.plot(years, net_revenue, marker='o', linestyle='-', color='blue', label='Net Revenue')
+    plt.plot(year, net_revenue, marker='o', linestyle='-', color='blue', label='Net Revenue')
 
     # Plot Aircraft Sold
     plt.plot(years, aircraft_sold, marker='o', linestyle='--', color='orange', label='Aircraft Sold')
