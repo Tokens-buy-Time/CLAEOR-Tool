@@ -815,10 +815,9 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write("Metrics calculated and displayed here are based upon all of the input data.")
     st.write(" ")
 
-    Year_n = 0                         
+                     
     for i in range(0,9):
-         Year_n += 1
-         calculate_financials(Year_n, assumptions, operations_data)                          
+         calculate_financials(Year_n={i +=1}, assumptions, operations_data)                          
        
 
 # Compile "all_financial" data from Financial Statements 
