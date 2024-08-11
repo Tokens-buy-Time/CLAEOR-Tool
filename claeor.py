@@ -859,7 +859,7 @@ def performance_metrics_screen(assumptions, *operations_data):
     net_revenue = df_financials["total_revenue"].tolist()
     aircraft_sold = [data[3] for data in all_operational_data]  # Assuming aircraft sold is the 4th item in operations_data
 
-    # plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
+    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
 
 
 
@@ -882,14 +882,6 @@ def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
 
     # Show the plot using Streamlit
     st.pyplot(plt)
-
-
-    
-    # Call the plot function
-    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
-
-    # Continue with the rest of the performance metrics calculations
-    # ...
 
                                    
 
