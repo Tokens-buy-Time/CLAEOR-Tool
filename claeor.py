@@ -861,7 +861,7 @@ def performance_metrics_screen(assumptions, *operations_data):
 
     plot_net_revenue(years, net_revenue)
     plot_aircraft_sold(years, aircraft_sold)
-    plot_facility_expenses(years, expenses)
+    plot_facility_expenses(years, operating_expenses)
 
 
 
