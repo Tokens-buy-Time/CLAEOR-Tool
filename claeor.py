@@ -813,6 +813,8 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(" ")
 
 # Compile "all_financial" data from Financial Statements 
+
+        financial_statements_screen(Year_n, assumptions, operations_data)
     
     # Assume 'assumptions' is correctly stored in session_state
     assumptions = st.session_state["assumptions"]
