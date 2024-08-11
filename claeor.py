@@ -883,6 +883,22 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
 
+# performance data visualization
+def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, 
+                               operations_data_3, operations_data_4, operations_data_5, 
+                               operations_data_6, operations_data_7, operations_data_8, 
+                               operations_data_9, operations_data_10):
+                                   
+    # Assuming all_financials is already defined as a dictionary with yearly data
+    years = list(all_financials.keys())
+    net_revenue = [all_financials[year]['Net Revenue'] for year in years]
+    aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
+
+    # Call the plot function
+    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
+
+    # Continue with the rest of the performance metrics calculations
+    # ...
 
 
 # Home screen function
