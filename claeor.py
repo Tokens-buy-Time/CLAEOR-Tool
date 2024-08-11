@@ -805,29 +805,6 @@ def Cash_Flow_Year(financials):
     st.write(" ")
 
 
-# Function to plot key output performance data
-def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold): 
-    plt.figure(figsize=(10, 6))
-
-    # Plot Net Revenue
-    plt.plot(years, net_revenue, color='blue', marker='o', label='Net Revenue (USD)')
-    plt.ylabel('Net Revenue (USD)', color='blue')
-    plt.tick_params(axis='y', labelcolor='blue')
-
-    # Adding a second y-axis for Aircraft Sold
-    ax2 = plt.gca().twinx()
-    ax2.plot(years, aircraft_sold, color='green', marker='x', linestyle='--', label='Aircraft Sold')
-    ax2.set_ylabel('Aircraft Sold', color='green')
-    ax2.tick_params(axis='y', labelcolor='green')
-
-    plt.title('Net Revenue and Aircraft Sold vs Year')
-    plt.xlabel('Year')
-    plt.grid(True)
-    plt.show()
-
-
-
-
 # Function to display performance metrics
 def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10):
     st.write(" ")
@@ -881,6 +858,13 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
 
+    # Call the plot function
+    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
+
+    # Continue with the rest of the performance metrics calculations
+    # ...
+
+
 # performance data visualization
 def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, 
                                operations_data_3, operations_data_4, operations_data_5, 
@@ -892,12 +876,27 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     net_revenue = [all_financials[year]['Net Revenue'] for year in years]
     aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
 
-    # Call the plot function
-    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
+# Function to plot key output performance data
+def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold): 
+    plt.figure(figsize=(10, 6))
 
-    # Continue with the rest of the performance metrics calculations
-    # ...
+    # Plot Net Revenue
+    plt.plot(years, net_revenue, color='blue', marker='o', label='Net Revenue (USD)')
+    plt.ylabel('Net Revenue (USD)', color='blue')
+    plt.tick_params(axis='y', labelcolor='blue')
 
+    # Adding a second y-axis for Aircraft Sold
+    ax2 = plt.gca().twinx()
+    ax2.plot(years, aircraft_sold, color='green', marker='x', linestyle='--', label='Aircraft Sold')
+    ax2.set_ylabel('Aircraft Sold', color='green')
+    ax2.tick_params(axis='y', labelcolor='green')
+
+    plt.title('Net Revenue and Aircraft Sold vs Year')
+    plt.xlabel('Year')
+    plt.grid(True)
+    plt.show()
+
+                                   
 
 # Home screen function
 def home_screen():
