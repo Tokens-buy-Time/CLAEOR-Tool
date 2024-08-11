@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd
 import math
+import matplotlib.pyplot as plt
+
 
 # Initialize session state variables for assumptions if they don't exist
 if "assumptions" not in st.session_state:
@@ -802,6 +804,30 @@ def Cash_Flow_Year(financials):
     st.write(f"Financing Cash Flow: ${financials['cash_flow_financing']:.2f}")
     st.write(f"Net Cash Flow: ${financials['net_cash_flow']:.2f}")
     st.write(" ")
+
+
+# Function to plot key output performance data
+
+def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
+    plt.figure(figsize=(10, 6))
+
+    # Plot Net Revenue
+    plt.plot(years, net_revenue, color='blue', marker='o', label='Net Revenue (USD)')
+    plt.ylabel('Net Revenue (USD)', color='blue')
+    plt.tick_params(axis='y', labelcolor='blue')
+
+    # Adding a second y-axis for Aircraft Sold
+    ax2 = plt.gca().twinx()
+    ax2.plot(years, aircraft_sold, color='green', marker='x', linestyle='--', label='Aircraft Sold')
+    ax2.set_ylabel('Aircraft Sold', color='green')
+    ax2.tick_params(axis='y', labelcolor='green')
+
+    plt.title('Net Revenue and Aircraft Sold vs Year')
+    plt.xlabel('Year')
+    plt.grid(True)
+    plt.show()
+
+
 
 
 # Function to display performance metrics
