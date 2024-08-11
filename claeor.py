@@ -758,7 +758,9 @@ def calculate_financials(Year_n, assumptions, operations_data):
         "net_cash_flow": net_cash_flow,
         "capital_supplied": capital_supplied
     }
-    
+
+# preparation for visual data presentation
+import matplotlib.pyplot as plt
 
 # Function to display Income Statement
 def Income_Year(financials):
@@ -806,10 +808,7 @@ def Cash_Flow_Year(financials):
 
 
 # Function to plot key output performance data
-
-def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
-    import matplotlib.pyplot as plt
-    
+def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold): 
     plt.figure(figsize=(10, 6))
 
     # Plot Net Revenue
