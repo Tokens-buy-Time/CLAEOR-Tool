@@ -816,8 +816,12 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write(" ")
 
                      
-    for i in range(0,9):
-         calculate_financials(Year_n={i +=1}, assumptions, operations_data)                          
+    # Aggregate calculate_financials data for each year
+    all_calculate_financials_data = [
+        calculate_financials(operations_data[0], assumptions, operations_data)  
+        for i in range(10)
+    ]
+                        
        
 
 # Compile "all_financial" data from Financial Statements 
