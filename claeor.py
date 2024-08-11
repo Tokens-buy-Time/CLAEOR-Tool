@@ -677,6 +677,9 @@ def operations_screen_10():
 
 
 # Function to calculate and display financial statements
+# Includes preparation for visual data presentation
+import matplotlib.pyplot as plt
+
 def financial_statements_screen(Year_n, assumptions, operations_data):
     st.header("Financial Statements")    
     st.write(" ")
@@ -759,8 +762,6 @@ def calculate_financials(Year_n, assumptions, operations_data):
         "capital_supplied": capital_supplied
     }
 
-# preparation for visual data presentation
-import matplotlib.pyplot as plt
 
 # Function to display Income Statement
 def Income_Year(financials):
