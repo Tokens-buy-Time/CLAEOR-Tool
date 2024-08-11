@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import math
-
+import matplotlib.pyplot as plt
 
 # Initialize session state variables for assumptions if they don't exist
 if "assumptions" not in st.session_state:
@@ -940,8 +940,6 @@ def instructions_screen():
     """)
 
 # Sidebar navigation
-# Includes preparation for visual data presentation
-import matplotlib.pyplot as plt
 
 menu = st.sidebar.selectbox("Navigation", ["Home", "Instructions", "Assumptions", "Operations - Year 1", "Operations - Year 2", "Operations - Year 3", "Operations - Year 4", "Operations - Year 5", "Operations - Year 6", "Operations - Year 7", "Operations - Year 8", "Operations - Year 9", "Operations - Year 10", "Financial Statements", "Performance Metrics"])
 
