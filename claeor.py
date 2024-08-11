@@ -883,7 +883,7 @@ def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
 
 
     # performance data visualization
-def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, 
+def performance_metrics_screen(year, assumptions, operations_data_1, operations_data_2, 
                                operations_data_3, operations_data_4, operations_data_5, 
                                operations_data_6, operations_data_7, operations_data_8, 
                                operations_data_9, operations_data_10):
