@@ -891,7 +891,7 @@ def plot_aircraft_sold(years, aircraft_sold):
     plt.plot(years, aircraft_sold, marker='o', linestyle='--', color='orange', label='Aircraft Sold')
 
     # Adding titles and labels
-    plt.title(Aircraft Sold over 10 Year period')
+    plt.title('Aircraft Sold over 10 Year period')
     plt.xlabel('Years')
     plt.ylabel('Values')
     plt.legend()
