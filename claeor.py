@@ -805,37 +805,16 @@ def Cash_Flow_Year(financials):
     st.write(" ")
 
 
+
 # Function to display performance metrics
-def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, 
-                               operations_data_3, operations_data_4, operations_data_5, 
-                               operations_data_6, operations_data_7, operations_data_8, 
-                               operations_data_9, operations_data_10):
+def performance_metrics_screen(assumptions, *operations_data):
     st.write(" ")
     st.header("Performance Metrics")
     st.write("Metrics calculated and displayed here are based upon all of the input data.")
     st.write(" ")
 
-                     
-    # Aggregate calculate_financials data for each year
-    
-        all_calculate_financials_data = st.session_state([f"operations_data_{i+1}[0])
-        all_calculate_financials_data = [
-        calculate_financials(assumptions, operations_data)]
-        for i in range(10)
-    ]
-                        
-       
-
-# Compile "all_financial" data from Financial Statements 
-    
-    # Assume 'assumptions' is correctly stored in session_state
-    assumptions = st.session_state["assumptions"]
-
     # Aggregate all operational data for each year
-    all_operational_data = [
-        st.session_state[f"operations_data_{i+1}"]
-        for i in range(10)
-    ]
+    all_operational_data = [data for data in operations_data]
 
     # Initialize the financials storage
     all_financials = {}
@@ -844,23 +823,15 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     for year, data in enumerate(all_operational_data, start=1):
         financials = calculate_financials(year, assumptions, data)
         all_financials[year] = financials
-
-
-
-# performance data visualization
-                                  
-    # Assuming all_financials is already defined as a dictionary with yearly data
-    years = list(all_financials.keys())
-    net_revenue = [all_financials[year]['Net Revenue'] for year in years]
-    aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
+    
+    # Create a DataFrame from the financials
+    df_financials = pd.DataFrame(all_financials).T
+    
+    st.write("Financial Data Year 1-10:", df_financials)
     
     # Calculate metrics over 10 years
     st.write("Metrics at Fund Exit end of Year 10")
     st.write(" ")
-
-    # Create a DataFrame from the financials
-    df_financials = pd.DataFrame(all_financials).T
-    st.write("Financial Data Year 1-10:", df_financials)
     
     total_revenue_10 = df_financials["total_revenue"].sum()
     total_net_profit_10 = df_financials["net_profit"].sum()
@@ -882,6 +853,13 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
 
     st.write(f"Internal Rate of Return (IRR) over 10 years: {irr:.2%}")
     st.write(f"Return on Investment (ROI) over 10 years: {roi:.2f}%")
+
+    # Visualization
+    years = list(all_financials.keys())
+    net_revenue = df_financials["total_revenue"].tolist()
+    aircraft_sold = [data[3] for data in all_operational_data]  # Assuming aircraft sold is the 4th item in operations_data
+
+    plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold)
 
 
 
