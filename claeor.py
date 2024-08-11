@@ -904,7 +904,7 @@ def plot_aircraft_sold(years, aircraft_sold):
 
 
 # Function to plot MRO/FBO/Dealership Expenses versus time
-def facility_expenses(years, operating_expenses):
+def plot_facility_expenses(years, operating_expenses):
     plt.figure(figsize=(10, 6))
 
     # Plot Facility Expenses
