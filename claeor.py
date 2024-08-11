@@ -909,7 +909,7 @@ def plot_facility_expenses(years, operating_expenses):
     plt.figure(figsize=(10, 6))
 
     # Plot Facility Expenses
-    plt.plot(years, expenses, marker='*', linestyle='-', color='red', label='Facility Expenses')
+    plt.plot(years, operating_expenses, marker='*', linestyle='-', color='red', label='Facility Expenses')
 
     # Adding titles and labels
     plt.title('Facility Expenses over 10 Years')
