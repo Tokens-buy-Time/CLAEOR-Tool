@@ -863,18 +863,15 @@ def performance_metrics_screen(assumptions, *operations_data):
 
 
 
-# Function to plot key output performance data
-def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
+# Function to plot Net Revenue versus time
+def plot_net_revenue(years, net_revenue):
     plt.figure(figsize=(10, 6))
 
     # Plot Net Revenue
     plt.plot(years, net_revenue, marker='o', linestyle='-', color='blue', label='Net Revenue')
 
-    # Plot Aircraft Sold
-    plt.plot(years, aircraft_sold, marker='o', linestyle='--', color='orange', label='Aircraft Sold')
-
     # Adding titles and labels
-    plt.title('Net Revenue and Aircraft Sold Over 10 Years')
+    plt.title('Net Revenue over 10 Years')
     plt.xlabel('Years')
     plt.ylabel('Values')
     plt.legend()
@@ -883,6 +880,24 @@ def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
     # Show the plot using Streamlit
     st.pyplot(plt)
 
+
+
+# Function to plot aircraft sales target variation with time 
+def plot_aircraft_sold(years, aircraft_sold):
+    plt.figure(figsize=(10, 6))
+
+    # Plot Aircraft Sold
+    plt.plot(years, aircraft_sold, marker='o', linestyle='--', color='orange', label='Aircraft Sold')
+
+    # Adding titles and labels
+    plt.title(Aircraft Sold over 10 Year period')
+    plt.xlabel('Years')
+    plt.ylabel('Values')
+    plt.legend()
+    plt.grid(True)
+
+    # Show the plot using Streamlit
+    st.pyplot(plt)
                                    
 
 # Home screen function
