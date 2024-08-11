@@ -883,7 +883,7 @@ def plot_net_revenue(years, net_revenue):
 
 
 
-# Function to plot aircraft sales target variation with time 
+# Function to plot aircraft sales target variation with time
 def plot_aircraft_sold(years, aircraft_sold):
     plt.figure(figsize=(10, 6))
 
