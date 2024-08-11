@@ -858,7 +858,8 @@ def performance_metrics_screen(assumptions, *operations_data):
     years = list(all_financials.keys())
     net_revenue = df_financials["total_revenue"].tolist()
     aircraft_sold = [data[3] for data in all_operational_data]  # Assuming aircraft sold is the 4th item in operations_data
-
+    operating_expenses = [data[8] for data in all_operational_data] # Assuming operating expenses is the 8th item in operations_data
+    
     plot_net_revenue(years, net_revenue)
     plot_aircraft_sold(years, aircraft_sold)
     plot_facility_expenses(years, operating_expenses)
