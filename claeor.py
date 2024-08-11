@@ -806,8 +806,10 @@ def Cash_Flow_Year(financials):
 
 
 # Function to plot key output performance data
-import matplotlib.pyplot as plt
+
 def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
+    import matplotlib.pyplot as plt
+    
     plt.figure(figsize=(10, 6))
 
     # Plot Net Revenue
