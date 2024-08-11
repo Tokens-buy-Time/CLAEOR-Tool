@@ -877,25 +877,24 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     aircraft_sold = [all_financials[year]['Aircraft Sold'] for year in years]
 
 # Function to plot key output performance data
-def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold): 
+def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
     plt.figure(figsize=(10, 6))
 
     # Plot Net Revenue
-    plt.plot(years, net_revenue, color='blue', marker='o', label='Net Revenue (USD)')
-    plt.ylabel('Net Revenue (USD)', color='blue')
-    plt.tick_params(axis='y', labelcolor='blue')
+    plt.plot(years, net_revenue, marker='o', linestyle='-', color='blue', label='Net Revenue')
 
-    # Adding a second y-axis for Aircraft Sold
-    ax2 = plt.gca().twinx()
-    ax2.plot(years, aircraft_sold, color='green', marker='x', linestyle='--', label='Aircraft Sold')
-    ax2.set_ylabel('Aircraft Sold', color='green')
-    ax2.tick_params(axis='y', labelcolor='green')
+    # Plot Aircraft Sold
+    plt.plot(years, aircraft_sold, marker='o', linestyle='--', color='orange', label='Aircraft Sold')
 
-    plt.title('Net Revenue and Aircraft Sold vs Year')
-    plt.xlabel('Year')
+    # Adding titles and labels
+    plt.title('Net Revenue and Aircraft Sold Over 10 Years')
+    plt.xlabel('Years')
+    plt.ylabel('Values')
+    plt.legend()
     plt.grid(True)
-    plt.show()
 
+    # Show the plot using Streamlit
+    st.pyplot(plt)
                                    
 
 # Home screen function
