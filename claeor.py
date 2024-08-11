@@ -861,6 +861,7 @@ def performance_metrics_screen(assumptions, *operations_data):
 
     plot_net_revenue(years, net_revenue)
     plot_aircraft_sold(years, aircraft_sold)
+    plot_facility_expenses(years, expenses)
 
 
 
@@ -892,6 +893,25 @@ def plot_aircraft_sold(years, aircraft_sold):
 
     # Adding titles and labels
     plt.title('Aircraft Sold over 10 Year period')
+    plt.xlabel('Years')
+    plt.ylabel('Values')
+    plt.legend()
+    plt.grid(True)
+
+    # Show the plot using Streamlit
+    st.pyplot(plt)
+
+
+
+# Function to plot MRO/FBO/Dealership Expenses versus time
+def Facility_Expenses(years, net_revenue):
+    plt.figure(figsize=(10, 6))
+
+    # Plot Facility Expenses
+    plt.plot(years, expenses, marker='*', linestyle='-', color='red', label='Facility Expenses')
+
+    # Adding titles and labels
+    plt.title('Facility Expenses over 10 Years')
     plt.xlabel('Years')
     plt.ylabel('Values')
     plt.legend()
