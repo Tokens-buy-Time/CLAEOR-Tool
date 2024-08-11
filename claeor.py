@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import math
-import matplotlib.pyplot as plt
 
 
 # Initialize session state variables for assumptions if they don't exist
@@ -807,7 +806,7 @@ def Cash_Flow_Year(financials):
 
 
 # Function to plot key output performance data
-
+import matplotlib.pyplot as plt
 def plot_net_revenue_and_aircraft_sold(years, net_revenue, aircraft_sold):
     plt.figure(figsize=(10, 6))
 
