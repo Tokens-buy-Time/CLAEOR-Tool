@@ -806,7 +806,10 @@ def Cash_Flow_Year(financials):
 
 
 # Function to display performance metrics
-def performance_metrics_screen(assumptions, operations_data_1, operations_data_2, operations_data_3, operations_data_4, operations_data_5, operations_data_6, operations_data_7, operations_data_8, operations_data_9, operations_data_10):
+def performance_metrics_screen(year, assumptions, operations_data_1, operations_data_2, 
+                               operations_data_3, operations_data_4, operations_data_5, 
+                               operations_data_6, operations_data_7, operations_data_8, 
+                               operations_data_9, operations_data_10):
     st.write(" ")
     st.header("Performance Metrics")
     st.write("Metrics calculated and displayed here are based upon all of the input data.")
@@ -836,11 +839,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
 
 
 # performance data visualization
-def performance_metrics_screen(year, assumptions, operations_data_1, operations_data_2, 
-                               operations_data_3, operations_data_4, operations_data_5, 
-                               operations_data_6, operations_data_7, operations_data_8, 
-                               operations_data_9, operations_data_10):
-                                   
+                                  
     # Assuming all_financials is already defined as a dictionary with yearly data
     years = list(all_financials.keys())
     net_revenue = [all_financials[year]['Net Revenue'] for year in years]
