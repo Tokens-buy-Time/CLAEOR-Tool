@@ -815,7 +815,7 @@ def performance_metrics_screen(assumptions, operations_data_1, operations_data_2
     st.write("Metrics calculated and displayed here are based upon all of the input data.")
     st.write(" ")
 
-    for i in range(1,10)
+    for i in range(1,10):
         calculate_financials(Year_n, assumptions, operations_data):                             
         Year_n += 1
 
