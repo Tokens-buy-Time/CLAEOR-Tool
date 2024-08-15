@@ -927,7 +927,7 @@ def home_screen():
     st.title("CLAEOR Tool")
     st.write("""
         Welcome to the CLAEOR Tool. This application allows you to input and save assumptions and operational data 
-        for your business. You can then view the financial statements and performance metrics based on the provided 
+        for a General Aviation business venture, comprised of a Luxury style FBO, a MRO and an aircraft Dealership all part of a combined facility and for which franchises are to be established. You can then view the financial statements and performance metrics based on the provided 
         data. Use the sidebar to navigate through different sections of the tool. It is recommended that you select and review the "Instructions" menu option prior to using the App.
     """)
 
