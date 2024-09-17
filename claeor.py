@@ -925,7 +925,7 @@ def plot_facility_expenses(years, operating_expenses):
 # Home screen function
 def home_screen():
     st.title("CLAEOR Tool")
-    st.image("IconA5-ExportModel.jpg", caption="The perfect Aerial Adventure Experience vehicle", use_column_width=True)
+    st.image("IconA5-ExportModel.JPG", caption="The perfect Aerial Adventure Experience vehicle", use_column_width=True)
     st.write("""
         Welcome to the CLAEOR Tool. This application allows you to input and save assumptions and operational data 
         for a General Aviation business venture, comprised of a Luxury style FBO, a MRO and an aircraft Dealership, all part of a combined facility for which franchises are to be established, in order to deliver services directly to numerious regional locations. You can then view the financial statements and performance metrics based on the provided 
