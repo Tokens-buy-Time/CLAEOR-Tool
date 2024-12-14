@@ -924,7 +924,7 @@ def plot_facility_expenses(years, operating_expenses):
 
 # Home screen function
 def home_screen():
-    st.image("IconA5-ExportModel.JPG", caption="The perfect Aerial Adventure Experience vehicle", use_column_width=True)
+    st.image("IconA5-ExportModel.JPG", caption="The perfect Aerial Adventure Experience vehicle")
     st.title("CLAEOR Tool")
     st.write("""
         Welcome to the CLAEOR Tool. This application allows you to input and save assumptions and operational data 
